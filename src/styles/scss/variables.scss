@@ -1,0 +1,135 @@
+$font-size-base: 14px;
+
+// Fonts
+$font-roboto: 'Roboto', Helvetica, Arial, sans-serif;
+
+$font-size-14: 14px;
+$font-size-13: 13px;
+$font-size-12: 12px;
+$font-size-10: 10px;
+$font-size-8: 8px;
+// Font-size / Desktop Theme
+$font-size-h1-desktop: 64px;
+$font-size-h2-desktop: 40px;
+$font-size-h3-desktop: 32px;
+$font-size-h4-desktop: 24px;
+$font-size-h5-desktop: 20px;
+$font-size-h6-desktop: 16px;
+
+// Font-size / Mobile Theme
+$font-size-h1-mobile: 40px;
+$font-size-h2-mobile: 32px;
+$font-size-h3-mobile: 26px;
+$font-size-h4-mobile: 20px;
+$font-size-h5-mobile: 20px;
+$font-size-h6-mobile: 16px;
+
+
+$line-height-18: 18px;
+$line-height-16: 16px;
+$line-height-14: 14px;
+$line-height-13: 13px;
+$line-height-12: 12px;
+$line-height-10: 10px;
+$line-height-8: 8px;
+// line-height / Desktop Theme
+$line-height-h1-desktop: 68px;
+$line-height-h2-desktop: 46px;
+$line-height-h3-desktop: 40px;
+$line-height-h4-desktop: 28px;
+$line-height-h5-desktop: 22px;
+$line-height-h6-desktop: 20px;
+
+// line-height / Mobile Theme
+$line-height-h1-mobile: 44px;
+$line-height-h2-mobile: 36px;
+$line-height-h3-mobile: 30px;
+$line-height-h4-mobile: 24px;
+$line-height-h5-mobile: 24px;
+$line-height-h6-mobile: 20px;
+
+// letter-spacing / Desktop Theme
+$letter-spacing-h1-desktop: -.5px;
+$letter-spacing-h2-desktop: -.5px;
+$letter-spacing-h3-desktop: -.5px;
+$letter-spacing-eyebrow-desktop: .2px;
+
+// letter-spacing / Mobile Theme
+$letter-spacing-h1-mobile: -.5px;
+$letter-spacing-h2-mobile: -.5px;
+$letter-spacing-h3-mobile: -.5px;
+$letter-spacing-eyebrow-mobile: .2px;
+$letter-spacing-4: -0.4px;
+
+// Color 
+$color-main: #F44336;
+$color-purple-main: #5f249f;
+$color-purple-tone: #3e037d;
+$color-purple-plum: #9d50c0;
+$color-purple-light-1: #7229c0;
+$color-purple-light-2: #977dff;
+$color-purple-light-3: #e5deef;
+$color-purple-light-4: #f6f3fc;
+$color-purple-light-5: #5e98db;
+
+$color-black: #161616;
+$color-black-1: #222222;
+$color-black-2: #2e2e2e;
+$color-gray-1: #707070;
+$color-gray-2: #A6A6A6;
+$color-gray-3: #CACACA;
+$color-gray-container: #f5f5ff;
+$color-gray-light: #f0f0f0;
+
+$bg-header-gradient: #be68d5;
+
+$body-bg-color: #1d2028;
+$color-white-tone: #fafaff;
+$footer-bg-color: #222823;
+
+$color-white: #fff;
+$color-green: #62c370;
+$color-green-tint: #e0f3e2;
+$color-orange: #f57803;
+$color-orange-tint: #ffe5cd;
+$color-purple-tint: #e9e0f7;
+$color-red-tint: #fddee2;
+$color-blue-tone: #07539f;
+$color-blue: #197fe5;
+$color-red: #ea3943;
+
+
+// config pixel
+$px-1: 1px;
+$px-2: 2px;
+$px-4: 4px;
+$px-6: 6px;
+$px-8: 8px;
+$px-10: 10px;
+$px-12: 12px;
+$px-14: 14px;
+$px-16: 16px;
+$px-18: 18px;
+$px-20: 20px;
+$px-24: 24px;
+$px-32: 32px;
+$px-40: 40px;
+$px-48: 48px;
+$px-64: 64px;
+$px-80: 80px;
+$px-100: 100px;
+$px-120: 120px;
+$px-150: 150px;
+$px-200: 200px;
+$px-300: 300px;
+$px-400: 400px;
+
+// breakpoints for Typography
+$typography-min-breakpoint: 960px;
+$sm-1-breakpoints: 608px;
+$md-1-breakpoints: 768px;
+$md-2-breakpoints: 959px;
+$lg-1-breakpoints: 960px;
+$lg-2-breakpoints: 1023px;
+$xlg-breakpoints: 1024px;
+$xxlg-breakpoints: 1440px;

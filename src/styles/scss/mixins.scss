@@ -1,0 +1,155 @@
+@import "./variables.scss";
+
+// Typography
+%heading1-shared {
+  // font-family: $font-gtwalsheim_pro_bold;
+  font-size: $font-size-h1-mobile;
+  line-height: $line-height-h1-mobile;
+  letter-spacing: $letter-spacing-h1-mobile;
+  font-weight: normal;
+  color: $color-black;
+}
+
+@mixin heading1() {
+  @extend %heading1-shared;
+
+  @include media-breakpoint-up-typography {
+    // font-family: $font-gtwalsheim_pro_bold;
+    font-size: $font-size-h1-desktop;
+    line-height: $line-height-h1-desktop;
+    letter-spacing: $letter-spacing-h1-desktop;
+    color: $color-black;
+  }
+}
+
+%heading2-shared {
+  // font-family: $font-gtwalsheim_pro_bold;
+  font-size: $font-size-h2-mobile;
+  line-height: $line-height-h2-mobile;
+  letter-spacing: $letter-spacing-h2-mobile;
+  font-weight: normal;
+  color: $color-black;
+}
+
+@mixin heading2() {
+  @extend %heading2-shared;
+
+  @include media-breakpoint-up-typography {
+    // font-family: $font-gtwalsheim_pro_bold;
+    font-size: $font-size-h2-desktop;
+    line-height: $line-height-h2-desktop;
+    letter-spacing: $letter-spacing-h2-desktop;
+    color: $color-black;
+  }
+}
+
+%heading3-shared {
+  // font-family: $font-gtwalsheim_pro_medium;
+  font-size: $font-size-h3-mobile;
+  line-height: $line-height-h3-mobile;
+  letter-spacing: $letter-spacing-h3-mobile;
+  font-weight: normal;
+  color: $color-black;
+}
+
+@mixin heading3() {
+  @extend %heading3-shared;
+
+  @include media-breakpoint-up-typography {
+    // font-family: $font-gtwalsheim_pro_medium;
+    font-size: $font-size-h3-desktop;
+    line-height: $line-height-h3-desktop;
+    letter-spacing: $letter-spacing-h3-desktop;
+    color: $color-black;
+  }
+}
+
+%heading4-shared {
+  // font-family: $font-gtwalsheim_pro_medium;
+  font-size: $font-size-h4-mobile;
+  line-height: $line-height-h4-mobile;
+  font-weight: normal;
+  color: $color-black;
+}
+
+@mixin heading4() {
+  @extend %heading4-shared;
+
+  @include media-breakpoint-up-typography {
+    // font-family: $font-gtwalsheim_pro_medium;
+    font-size: $font-size-h4-desktop;
+    line-height: $line-height-h4-desktop;
+    color: $color-black;
+  }
+}
+
+%heading5-shared {
+  // font-family: $font-gtwalsheim_pro_medium;
+  font-size: $font-size-h5-mobile;
+  line-height: $line-height-h5-mobile;
+  font-weight: normal;
+  color: $color-black;
+}
+
+@mixin heading5() {
+  @extend %heading5-shared;
+
+  @include media-breakpoint-up-typography {
+    // font-family: $font-gtwalsheim_pro_medium;
+    font-size: $font-size-h5-desktop;
+    line-height: $line-height-h5-desktop;
+    color: $color-black;
+  }
+}
+
+%heading6-shared {
+  // font-family: $font-roboto;
+  font-size: $font-size-h6-mobile;
+  line-height: $line-height-h6-mobile;
+  font-weight: normal;
+  color: $color-black;
+}
+
+@mixin heading6() {
+  @extend %heading6-shared;
+
+  @include media-breakpoint-up-typography {
+    // font-family: $font-gtwalsheim_pro_medium;
+    font-size: $font-size-h6-desktop;
+    line-height: $line-height-h6-desktop;
+    color: $color-black;
+  }
+}
+
+
+
+$breakpoints: ("phone": 400px,
+  "phone-wide": 480px,
+  "phablet": 560px,
+  "tablet-small": 640px,
+  "tablet": 768px,
+  "tablet-wide": 1024px,
+  "desktop": 1248px,
+  "desktop-wide": 1440px);
+
+@mixin media-query($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+
+    @if $type==max {
+      $width: $width - 1px;
+    }
+
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+
+@mixin truncate($truncation-boundary) {
+  max-width: $truncation-boundary;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,52 @@
+{
+  "tileWebsite": "Phố Ốc Chú Năm - Liên hệ đặt tiệc",
+  "name": "Phố Ốc Chú Năm",
+  "menu": {
+    "title1": "Trang chủ",
+    "title2": "Thực đơn",
+    "title3": "Chi nhánh",
+    "title4": "Liên hệ"
+  },
+  "features": {
+    "1": {
+      "title": "Thương hiệu độc quyền",
+      "description": "Thương hiệu được khẳng định với 5 năm kinh nghiệm trong ngành hải sản tươi sống."
+    },
+    "2": {
+      "title": "Thực đơn đa dạng",
+      "description": "Thực đơn với hơn *00 món ăn, đa dạng phong phú cùng nhiều loại hải sản."
+    },
+    "3": {
+      "title": "Không gian rộng rãi",
+      "description": "Không gian rộng rãi thoáng mát phục vụ tiệc, sinh nhật, tất niên, cưới, hỏi ..."
+    },
+    "4": {
+      "title": "Nhân viên chu đáo",
+      "description": "Nhân viên phục vụ theo yêu cầu giúp quý khách có 1 bữa ăn ngon miệng."
+    }
+  },
+  "const": {
+    "price": "Giá",
+    "phone": "Số điện thoại",
+    "phone2": "SĐT",
+    "website": "Website",
+    "address": "Địa chỉ",
+    "branch": "Chi nhánh",
+    "call": "Liên hệ",
+    "menu": "Thực đơn",
+    "category": "Danh mục",
+    "email": "Email",
+    "open": "Giờ mở cửa",
+    "system": "Hệ thống nhà hàng"
+  },
+  "header": {
+    "seafood": "Hải sản tươi sống",
+    "trend": "Món ăn nổi bật",
+    "wellcome": "Hân hạnh được phục vụ quý khách"
+  },
+  "action": {
+    "seemenu": "Xem thực đơn",
+    "book": "Liên hệ đặt bàn",
+    "direction": "Chỉ đường"
+  }
+}
