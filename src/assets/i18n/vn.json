@@ -1,6 +1,12 @@
 {
   "tileWebsite": "Phố Ốc Chú Năm - Liên hệ đặt tiệc",
+  "caption": "Hệ thống nhà hàng",
   "name": "Phố Ốc Chú Năm",
+  "description": "Chuyên phục vụ hải sản tươi sống, tiệc, cưới, sinh nhật, tất niên, liên hoan ...",
+  "openAt": {
+    "text": "Giờ mở cửa: ",
+    "time": "9:00 - 23:00"
+  },
   "menu": {
     "title1": "Trang chủ",
     "title2": "Thực đơn",
@@ -26,27 +32,47 @@
     }
   },
   "const": {
-    "price": "Giá",
+    "price": "Giá: ",
     "phone": "Số điện thoại",
     "phone2": "SĐT",
     "website": "Website",
     "address": "Địa chỉ",
     "branch": "Chi nhánh",
-    "call": "Liên hệ",
+    "contact": "Liên hệ",
     "menu": "Thực đơn",
     "category": "Danh mục",
     "email": "Email",
-    "open": "Giờ mở cửa",
-    "system": "Hệ thống nhà hàng"
+    "fanpage": "Fanpage",
+    "loading": "Đang tải ...",
+    "gotoTop": "Lên đầu trang"
   },
-  "header": {
+  "homeheader": {
     "seafood": "Hải sản tươi sống",
     "trend": "Món ăn nổi bật",
+    "branch": "Chi nhánh",
+    "branch_sub": "Gọi điện cho chúng tôi để đặt bàn ngay.",
     "wellcome": "Hân hạnh được phục vụ quý khách"
   },
   "action": {
     "seemenu": "Xem thực đơn",
     "book": "Liên hệ đặt bàn",
     "direction": "Chỉ đường"
+  },
+  "footer": {
+    "branch1": {
+      "title": "CN1: ",
+      "description": "An Phú, Thuận An - ",
+      "contact": "0965321515"
+    },
+    "branch2": {
+      "title": "CN2: ",
+      "description": "Khánh Bình, Tân Uyên - ",
+      "contact": "0965321515"
+    },
+    "branch3": {
+      "title": "CN3: ",
+      "description": "Bình Chuẩn, Thuận An - ",
+      "contact": "0965321515"
+    }
   }
 }

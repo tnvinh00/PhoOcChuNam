@@ -1,11 +1,14 @@
 <app-top-bar></app-top-bar>
-<ng-scrollbar class="my-scrollbar">
+<!-- <ng-scrollbar class="my-scrollbar"> -->
 
-  <div class="main">
-    <div class="wrapper">
-      <router-outlet></router-outlet>
-    </div>
+<div class="main">
+  <div class="wrapper">
+    <router-outlet></router-outlet>
   </div>
+</div>
+<app-footer></app-footer>
 
-  <app-footer></app-footer>
-</ng-scrollbar>
+<!-- </ng-scrollbar> -->
+
+
+<app-scroll-top-button></app-scroll-top-button>

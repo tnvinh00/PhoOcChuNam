@@ -7,7 +7,7 @@ export const myCustomTooltipDefaults: MatTooltipDefaultOptions = {
   showDelay: 100,
   hideDelay: 100,
   touchendHideDelay: 100,
-  position: 'above'
+  position: 'above',
 };
 
 @Component({

@@ -1,0 +1,76 @@
+<div class="carousel-main">
+  <div class="carousel-overlay">
+    <p class="content-subtitle">{{ 'caption' | translate}}</p>
+    <p class="content-title">{{ 'name' | translate }}</p>
+    <p class="content-description">{{ 'description' | translate }}</p>
+    <p class="content-open">{{ 'openAt.text' | translate }}<b>{{ 'openAt.time' | translate }}</b></p>
+    <div class="carousel-button">
+      <app-round-button [text]="'Đặt bàn'" class="mr-2" [icon]="'phone_enabled'" (click)="onClickBook()">
+      </app-round-button> {{" "}}
+      <app-round-button [text]="'Xem menu'" [icon]="'restaurant_menu'" [color]="'#FFFFFF'" [textColor]="'#F44336'"
+        (click)="onClickContact()">
+      </app-round-button>
+    </div>
+  </div>
+  <ng-template [ngIf]="carousel.length > 0" [ngIfElse]="loading">
+    <ngb-carousel *ngIf="carousel" [showNavigationArrows]="true" [showNavigationIndicators]="false" [interval]="4000"
+      [pauseOnHover]="false" class="mb-4">
+      <ng-template ngbSlide *ngFor="let item of carousel">
+        <div class="picsum-img-wrapper">
+          <img [src]="item.image" alt="Random slide">
+        </div>
+        <div class="carousel-caption">
+          <h5 class="m-0">{{item.subtitle}}</h5>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </ng-template>
+  <ng-template #loading>
+    <ngb-carousel *ngIf="carousel" [showNavigationArrows]="true" [showNavigationIndicators]="false" [interval]="5000"
+      [pauseOnHover]="false" class="mb-4">
+      <ng-template ngbSlide *ngFor="let item of [1]">
+        <div class="picsum-img-wrapper">
+          <img [src]="'assets/images/logo/loading.gif'" alt="Loading slide">
+        </div>
+        <div class="carousel-caption">
+          <h5 class="m-0">{{ 'const.loading' | translate }}</h5>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </ng-template>
+</div>
+
+<div class="carousel-responsive">
+  <p class="content-subtitle">{{ 'caption' | translate}}</p>
+  <p class="content-title">{{ 'name' | translate }}</p>
+  <p class="content-description">{{ 'description' | translate }}</p>
+  <p class="content-open">{{ 'openAt.text' | translate }}<b>{{ 'openAt.time' | translate }}</b></p>
+  <div class="carousel-button">
+    <app-round-button [text]="'Đặt bàn'" class="mr-2" [icon]="'phone_enabled'" (click)="onClickBook()">
+    </app-round-button> {{" "}}
+    <app-round-button [text]="'Xem menu'" [icon]="'restaurant_menu'" [color]="'#FFFFFF'" [textColor]="'#F44336'"
+      (click)="onClickContact()">
+    </app-round-button>
+  </div>
+</div>
+
+<!-- 
+<div class="carousel-main">
+  <div class="carousel-content">
+    <p class="carousel-subtitle">{{ 'caption' | translate}}</p>
+    <p class="carousel-title">{{ 'name' | translate }}</p>
+    <div class="carousel-button">
+      <app-round-button [text]="'Đặt bàn'" [icon]="'phone_enabled'" (click)="onClickBook()"></app-round-button> {{"  "}}
+      <app-round-button [text]="'Xem menu'" [icon]="'restaurant_menu'" [color]="'#FFFFFF'" (click)="onClickContact()"></app-round-button>
+    </div>
+  </div>
+
+  <owl-carousel-o [options]="customOptions">
+    <ng-template carouselSlide *ngFor="let image of images">
+      <div class="picsum-img-wrapper">
+        <img [src]="image" alt="Random slide">
+      </div>
+    </ng-template>
+  </owl-carousel-o>
+</div>
+<div>Some tags after</div> -->

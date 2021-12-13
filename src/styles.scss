@@ -1,29 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
-
-@import url('./assets/styles/toastr.css');
-
-html,
-body {
-  height: 100%;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto", "Helvetica Neue", "Arial", sans-serif;
-  overflow: hidden;
-}
-
-ul, ol, dl {
-  margin-top: 0;
-  margin-bottom: 0!important;
-}
-
-.container{
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
 @import 'styles/scss/mixins.scss';
 @import 'styles/scss/variables.scss';
+@import url('./assets/styles/toastr.css');
+
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
+// @font-face {
+//   font-family: 'Roboto';
+//   src: url('assets/fonts/Roboto-Regular.ttf');
+// }
+
+html,
+body {
+  box-sizing: border-box;
+  // scroll-behavior: smooth;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", "Roboto", "Helvetica Neue", "Arial", sans-serif;
+  // overflow: hidden;
+}
+
+ul,
+ol,
+dl {
+  margin-top: 0;
+  margin-bottom: 0 !important;
+}
+
+.my-container {
+  // max-width: 1440px;
+  margin: 0 auto;
+
+  @media (min-width: 1200px) {
+    max-width: 1350px;
+  }
+}

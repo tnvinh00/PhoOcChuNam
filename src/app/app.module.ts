@@ -1,3 +1,4 @@
+import { ScrollTopButtonComponent } from './../components/button/scroll-top-button/scroll-top-button.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
@@ -11,6 +12,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { NgScrollbarModule, NG_SCROLLBAR_OPTIONS } from 'ngx-scrollbar';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 // Import Components
 import { MaterialModule } from './material.module';
@@ -19,7 +22,9 @@ import { FooterComponent } from 'components/footer/footer.component';
 import { RoundButtonComponent } from 'components/button/round-button/round-button.component';
 import { HomePageComponent } from 'pages/HomePage/HomePage.component';
 import { MenuPageComponent } from 'pages/MenuPage/MenuPage.component';
-
+import { CarouselComponent } from 'components/carousel/carousel.component';
+import { TopCarouselComponent } from 'components/top-carousel/top-carousel.component';
+import { BranchCardComponent } from 'components/branch-card/branch-card.component';
 
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: HttpClient) {
@@ -34,6 +39,10 @@ export function createTranslateLoader(http: HttpClient) {
     TopBarComponent,
     FooterComponent,
     RoundButtonComponent,
+    CarouselComponent,
+    TopCarouselComponent,
+    ScrollTopButtonComponent,
+    BranchCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,6 +50,8 @@ export function createTranslateLoader(http: HttpClient) {
     BrowserAnimationsModule,
     HttpClientModule,
     NgScrollbarModule,
+    CarouselModule,
+    NgxSkeletonLoaderModule,
     TranslateModule.forRoot({
       defaultLanguage: 'vn',
       loader: {
@@ -53,7 +64,7 @@ export function createTranslateLoader(http: HttpClient) {
     NgbModule,
     ToastrModule.forRoot({
       autoDismiss: true,
-      maxOpened: 2,
+      maxOpened: 10,
       timeOut: 2000,
     })
   ],
@@ -62,7 +73,9 @@ export function createTranslateLoader(http: HttpClient) {
       provide: NG_SCROLLBAR_OPTIONS,
       useValue: {
         visibility: 'hover',
-        minThumbSize: 20
+        minThumbSize: 20,
+        autoWidthDisabled: false,
+        pointerEventsMethod: 'scrollbar'
       }
     }
   ],

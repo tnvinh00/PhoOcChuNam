@@ -1,5 +1,5 @@
-export default class Category {
-  id: number;
+export class Category {
+  id: string;
   image: string;
   name: string;
   nameENG: string;

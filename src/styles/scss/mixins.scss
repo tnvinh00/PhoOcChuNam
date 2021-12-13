@@ -146,6 +146,17 @@ $breakpoints: ("phone": 400px,
   }
 }
 
+@mixin media-breakpoint-up-typography {
+  @media (min-width: $typography-min-breakpoint) {
+      @content;
+  }
+}
+
+@mixin breakpoint($type: min, $width){
+  @media only screen and (#{$type}-width: $width) {
+    @content;
+  }
+}
 
 @mixin truncate($truncation-boundary) {
   max-width: $truncation-boundary;

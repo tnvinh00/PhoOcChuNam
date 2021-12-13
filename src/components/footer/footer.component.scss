@@ -1,16 +1,30 @@
+@import '/src/styles/scss/variables.scss';
+@import '/src/styles/scss/mixins.scss';
+
 footer {
-  background: linear-gradient(to right, #ff6155, #ffc675);
-  color: #000;
+  background: $color-main;
+  color: $color-white;
+
+  .footer-info{
+    @include breakpoint('max', '960px'){
+      margin-top: $px-20;
+      text-align: center;
+    }
+    p a{
+      color: $color-white;
+    }
+  }
+  .text-book{
+    @include breakpoint('max', '960px'){
+      margin-top: $px-20;
+      text-align: center;
+    }
+  }
 }
 
 .list-inline-item a i {
   color: #fff;
   font-size: 1.5rem;
-}
-
-#button-addon1 {
-  color: #FE7A63;
-  background-color: #fff;
 }
 
 .list-footer li a:hover {

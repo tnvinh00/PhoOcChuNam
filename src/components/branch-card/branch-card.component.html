@@ -1,0 +1,58 @@
+<ng-template [ngIf]="isloading == false" [ngIfElse]="loading">
+  <div class="card card-branch m-1">
+    <div class="card-body px-0 pt-0">
+      <div class="card-image-block w-auto overflow-hidden">
+        <img class="card-branch-image" [src]="branch.image"
+          onerror="this.onerror=null;this.src='https://i.imgur.com/QJzMcF1.png'" alt="Card image cap">
+      </div>
+      <p class="card-branch-title px-1 pt-4 mb-0 text-center">{{branch.name}}</p>
+      <div class="px-3 pt-2 text-center">
+        <p class="card-branch-address">{{branch.address}}</p>
+        <div class="card-branch-phone">
+          <span>{{'const.phone2' | translate}}{{": "}}</span>
+          <span *ngFor="let p of branch.phone">
+            <a href="tel:{{p}}">{{p}} </a>
+          </span>
+        </div>
+        <div class="card-branch-fanpage mb-3">
+          <span>{{'const.fanpage' | translate}}{{": "}}</span>
+          <a href="{{branch.link}}">{{branch.fanpage}}</a>
+        </div>
+        <app-round-button [text]="'Chỉ đường'" [icon]="'near_me'" [height]="'45px'"></app-round-button>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #loading>
+  <div class="card card-branch m-1">
+    <div class="card-body px-0 pt-0 w-100">
+      <div class="card-image-block w-auto overflow-hidden">
+        <ngx-skeleton-loader count="1"
+          [theme]="{ 'border-radius': '10px 10px 0 0', 'margin-bottom': '25px', width: '400px', height: '200px'}"
+          appearance="line">
+        </ngx-skeleton-loader>
+      </div>
+      <div class="px-2 pt-2">
+        <ngx-skeleton-loader count="1" appearance="line">
+        </ngx-skeleton-loader>
+      </div>
+      <div class="px-5 text-center">
+        <ngx-skeleton-loader count="1" appearance="line">
+        </ngx-skeleton-loader>
+        <div class="card-branch-phone px-5">
+          <ngx-skeleton-loader count="1" appearance="line">
+          </ngx-skeleton-loader>
+        </div>
+        <div class="card-branch-fanpage mb-3">
+          <ngx-skeleton-loader count="1" appearance="line">
+          </ngx-skeleton-loader>
+        </div>
+        <ngx-skeleton-loader count="1"
+          [theme]="{ 'border-radius': '25px', 'margin-bottom': '25px', height: '45px'}"
+          appearance="line">
+        </ngx-skeleton-loader>
+      </div>
+    </div>
+  </div>
+</ng-template>

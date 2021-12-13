@@ -1,5 +1,5 @@
 <header class="header bg-light">
-  <div class="container">
+  <div class="container my-container">
     <div class="header-container">
       <a class="header-logo h2 m-0" href="/">
         <img src="assets/images/logo/logo.png" alt="{{'name' | translate}}">
@@ -9,17 +9,22 @@
           <a routerLink="/" class="menu-item-link">{{'menu.title1' | translate}}</a>
         </li>
         <li class="menu-item">
-          <a routerLink="/dashboard" class="menu-item-link">{{'menu.title2' | translate}}</a>
+          <a routerLink="/menu" class="menu-item-link">{{'menu.title2' | translate}}</a>
         </li>
         <li class="menu-item">
-          <a href="#list-foods" type="button" class="menu-item-link">{{'menu.title3' | translate}}</a>
+          <a href="#chi-nhanh" type="button" class="menu-item-link">{{'menu.title3' | translate}}</a>
         </li>
         <li class="menu-item">
-          <a href="/pricing" class="menu-item-link">Pricing</a>
+          <button mat-raised-button class="menu-item-button" color="'#F44336'">
+            <span class="button-text">{{'menu.title4' | translate}}</span> {{" "}}
+            <mat-icon>phone_enabled</mat-icon>
+          </button>
         </li>
       </ul>
       <div class="menu-toggle">
-
+        <button mat-icon-button color="warn">
+          <mat-icon>menu</mat-icon>
+        </button>
       </div>
     </div>
   </div>

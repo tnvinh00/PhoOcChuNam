@@ -1,0 +1,129 @@
+@import '/src/styles/scss/variables.scss';
+@import '/src/styles/scss/mixins.scss';
+
+.owl-carousel .owl-stage-outer {
+  padding-bottom: 20px !important;
+}
+
+.general-section {
+  display: flex;
+  justify-content: center;
+
+  .card-category {
+    background-color: $color-card;
+
+    .card-body {
+      img {
+        border: 1px solid $color-gray-2;
+        border-radius: 10px;
+        height: 150px;
+        object-fit: cover;
+
+        @include breakpoint('max', '960px') {
+          height: 120px;
+        }
+      }
+
+      .text-seafood {
+        font-size: 1.2rem;
+        font-weight: 600;
+        min-height: 60px;
+      }
+    }
+  }
+
+  //text title
+  .card-title-text {
+    text-align: center;
+    margin-bottom: 0;
+    padding: 0 10px;
+    margin-top: 20px;
+  }
+
+  .card-trend {
+    border: 1px solid $color-main;
+    background-color: $color-card;
+    border-radius: 10px;
+
+    .card-body {
+      padding: 0;
+
+      .card-image-block {
+        border-radius: 10px 10px 0 0;
+
+        img {
+          height: 180px;
+          object-fit: cover;
+
+          @include breakpoint('max', '960px') {
+            height: 150px;
+          }
+        }
+      }
+
+      .text-food {
+        font-size: 1.1rem;
+        font-weight: 500;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 1;
+        white-space: nowrap;
+        word-break: break-all;
+      }
+
+
+      .card-divider {
+        width: 80px;
+        height: 1px;
+        background-color: $color-main;
+      }
+
+      .card-price-text {
+        text-align: center;
+        margin-bottom: 15px;
+
+        span {
+          font-weight: 700;
+        }
+
+        :last-child {
+          color: $color-main;
+        }
+      }
+    }
+  }
+}
+
+.card-category,
+.card-trend {
+  box-shadow: 0 5px 20px rgb(0 0 0 / 5%);
+}
+
+.card-category:hover,
+.card-trend:hover {
+  box-shadow: 0 5px 20px rgb(0 0 0 / 20%);
+  transform: translateY(-3px);
+  transition: all 0.2s ease-in-out;
+
+  .card-image {
+    transform: scale(1.05);
+  }
+}
+
+
+.section-header {
+  margin: 60px 0 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: $font-size-h3-desktop;
+  font-weight: 700;
+
+  @include breakpoint('max', '960px') {
+    font-size: 1.5rem;
+  }
+}
+
+.section-subtile {
+  color: $color-gray-2;
+  text-align: center;
+}

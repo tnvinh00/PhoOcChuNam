@@ -8,8 +8,52 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="assets/styles/phone.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/d40031a9eb.js"></script>
 </head>
 <body>
   <app-root></app-root>
+
+  <!-- Phone -->
+  <div class="quick-alo-phone quick-alo-green quick-alo-show" id="quick-alo-phoneIcon">
+    <a href="tel: 0965363248" title="0965363248">
+      <div class="quick-alo-ph-circle"></div>
+      <div class="quick-alo-ph-circle-fill"></div>
+      <div class="quick-alo-ph-img-circle">
+        <i class="fa fa-phone" aria-hidden="true"></i>
+      </div>
+    </a>
+  </div>
+
+  <!-- Messenger Chat Plugin Code -->
+  <div id="fb-root"></div>
+
+  <!-- Your Chat Plugin code -->
+  <div id="fb-customer-chat" class="fb-customerchat">
+  </div>
+
+  <script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute("page_id", "713500148702842");
+    chatbox.setAttribute("attribution", "biz_inbox");
+  </script>
+
+  <!-- Your SDK code -->
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        xfbml            : true,
+        version          : 'v12.0'
+      });
+    };
+
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
 </body>
 </html>
