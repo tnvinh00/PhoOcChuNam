@@ -11,4 +11,5 @@ export class Branch {
   website: string;
   fanpage: string;
   link: string;
+  slug: string;
 }

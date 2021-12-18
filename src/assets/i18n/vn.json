@@ -1,5 +1,10 @@
 {
-  "tileWebsite": "Phố Ốc Chú Năm - Liên hệ đặt tiệc",
+  "tileWebsite": {
+    "home": "Nhà hàng Phố Ốc Chú Năm - Hải sản tươi sống, hương vị độc quyền - Nhận đặt tiệc, sinh nhật, liên hoan, tất niên...",
+    "menu": "Thực đơn món ăn - Nhà hàng Phố Ốc Chú Năm - Hải sản tươi sống, hương vị độc quyền - Nhận đặt tiệc, sinh nhật, liên hoan, tất niên...",
+    "branch": "Chi nhánh - Nhà hàng Phố Ốc Chú Năm - Hải sản tươi sống, hương vị độc quyền - Nhận đặt tiệc, sinh nhật, liên hoan, tất niên...",
+    "notfound": "Không tìm thấy trang - Nhà hàng Phố Ốc Chú Năm - Hải sản tươi sống, hương vị độc quyền - Nhận đặt tiệc, sinh nhật, liên hoan, tất niên..."
+  },
   "caption": "Hệ thống nhà hàng",
   "name": "Phố Ốc Chú Năm",
   "description": "Chuyên phục vụ hải sản tươi sống, tiệc, cưới, sinh nhật, tất niên, liên hoan ...",
@@ -13,23 +18,45 @@
     "title3": "Chi nhánh",
     "title4": "Liên hệ"
   },
+  "branch": {
+    "1": "Phố Ốc Chú Năm 1",
+    "2": "Phố Ốc Chú Năm 2",
+    "3": "Hầm Rượu Phố Ốc Chú Năm 3"
+  },
   "features": {
     "1": {
-      "title": "Thương hiệu độc quyền",
-      "description": "Thương hiệu được khẳng định với 5 năm kinh nghiệm trong ngành hải sản tươi sống."
+      "title": "Hương hiệu độc quyền",
+      "description": "Thương hiệu được khẳng định với 5 năm kinh nghiệm trong ngành hải sản tươi sống.",
+      "image": "https://res.cloudinary.com/tnvinh00/image/upload/v1639773813/PhoOcChuNam/248983859_403780808069984_5321418502231262925_n_sgguch.jpg"
     },
     "2": {
       "title": "Thực đơn đa dạng",
-      "description": "Thực đơn với hơn *00 món ăn, đa dạng phong phú cùng nhiều loại hải sản."
+      "description": "Hải sản tươi sống bắt tại bể, thực đơn hơn 200 món ăn sẵn sàng phục vụ cho các bạn.",
+      "image": "https://res.cloudinary.com/tnvinh00/image/upload/v1639773133/PhoOcChuNam/image_1_1_lnmkmg.png"
     },
     "3": {
       "title": "Không gian rộng rãi",
-      "description": "Không gian rộng rãi thoáng mát phục vụ tiệc, sinh nhật, tất niên, cưới, hỏi ..."
+      "description": "Không gian rộng rãi thoáng mát phục vụ tiệc, sinh nhật, tất niên, cưới, hỏi ...",
+      "image": "https://res.cloudinary.com/tnvinh00/image/upload/v1639773813/PhoOcChuNam/248983859_403780808069984_5321418502231262925_n_sgguch.jpg"
     },
     "4": {
       "title": "Nhân viên chu đáo",
-      "description": "Nhân viên phục vụ theo yêu cầu giúp quý khách có 1 bữa ăn ngon miệng."
+      "description": "Nhân viên phục vụ theo yêu cầu giúp quý khách có 1 bữa ăn ngon miệng.",
+      "image": "https://res.cloudinary.com/tnvinh00/image/upload/v1639773880/PhoOcChuNam/262356873_260212049423593_4616937607343868844_n_jckfxh.jpg"
     }
+  },
+  "menupage": {
+    "search": {
+      "label": "Tìm kiếm món ăn tại đây",
+      "placeholder": "Nhập tên món ăn cần tìm",
+      "hint": "Ví dụ: Cua, Cá tầm, ..."
+    }
+  },
+  "notfound": {
+    "title": "Không tìm thấy trang",
+    "description1": "Trang bạn yêu cầu không tồn tại hoặc đã bị xóa.",
+    "description2": "Vui lòng kiểm tra lại địa chỉ trên thanh địa chỉ của trình duyệt hoặc trở lại trang chủ.",
+    "action": "Trở về trang chủ"
   },
   "const": {
     "price": "Giá: ",
@@ -40,11 +67,14 @@
     "branch": "Chi nhánh",
     "contact": "Liên hệ",
     "menu": "Thực đơn",
-    "category": "Danh mục",
+    "category": "Danh mục món ăn",
     "email": "Email",
     "fanpage": "Fanpage",
     "loading": "Đang tải ...",
-    "gotoTop": "Lên đầu trang"
+    "gotoTop": "Lên đầu trang",
+    "result": "(Có {{result}} món ăn)",
+    "noresult": "Không tìm thấy món ăn '{{searchString}}'. Vui lòng thử lại.",
+    "developer": "Developer by "
   },
   "homeheader": {
     "seafood": "Hải sản tươi sống",
@@ -54,24 +84,24 @@
     "wellcome": "Hân hạnh được phục vụ quý khách"
   },
   "action": {
-    "seemenu": "Xem thực đơn",
-    "book": "Liên hệ đặt bàn",
+    "seemenu": "Xem menu",
+    "book": "Đặt bàn",
     "direction": "Chỉ đường"
   },
   "footer": {
     "branch1": {
       "title": "CN1: ",
-      "description": "An Phú, Thuận An - ",
+      "description": "An Phú, Thuận An, BD - ",
       "contact": "0965321515"
     },
     "branch2": {
       "title": "CN2: ",
-      "description": "Khánh Bình, Tân Uyên - ",
+      "description": "Khánh Bình, Tân Uyên, BD - ",
       "contact": "0965321515"
     },
     "branch3": {
       "title": "CN3: ",
-      "description": "Bình Chuẩn, Thuận An - ",
+      "description": "Bình Chuẩn, Thuận An, BD - ",
       "contact": "0965321515"
     }
   }

@@ -2,10 +2,15 @@
   <div class="card card-branch m-1">
     <div class="card-body px-0 pt-0">
       <div class="card-image-block w-auto overflow-hidden">
-        <img class="card-branch-image" [src]="branch.image"
-          onerror="this.onerror=null;this.src='https://i.imgur.com/QJzMcF1.png'" alt="Card image cap">
+        <a class="text-decoration" [routerLink]="['/chi-nhanh', branch.slug]">
+          <img class="card-branch-image" [src]="branch.image[0]"
+            onerror="this.onerror=null;this.src='https://res.cloudinary.com/tnvinh00/image/upload/v1639495889/PhoOcChuNam/QJzMcF1_n42ptl.png'"
+            alt="Card image cap">
+        </a>
       </div>
-      <p class="card-branch-title px-1 pt-4 mb-0 text-center">{{branch.name}}</p>
+      <a class="text-decoration" [routerLink]="['/chi-nhanh', branch.slug]">
+        <p class="card-branch-title px-1 pt-4 mb-0 text-center">{{branch.name}}</p>
+      </a>
       <div class="px-3 pt-2 text-center">
         <p class="card-branch-address">{{branch.address}}</p>
         <div class="card-branch-phone">
@@ -16,9 +21,10 @@
         </div>
         <div class="card-branch-fanpage mb-3">
           <span>{{'const.fanpage' | translate}}{{": "}}</span>
-          <a href="{{branch.link}}">{{branch.fanpage}}</a>
+          <a href="{{branch.link}}" target="_blank">{{branch.fanpage}}</a>
         </div>
-        <app-round-button [text]="'Chỉ đường'" [icon]="'near_me'" [height]="'45px'"></app-round-button>
+        <app-round-button [text]="'Chỉ đường'" [icon]="'near_me'" [height]="'45px'"
+          (click)="onDirection(branch.googlemap)"></app-round-button>
       </div>
     </div>
   </div>
@@ -48,8 +54,7 @@
           <ngx-skeleton-loader count="1" appearance="line">
           </ngx-skeleton-loader>
         </div>
-        <ngx-skeleton-loader count="1"
-          [theme]="{ 'border-radius': '25px', 'margin-bottom': '25px', height: '45px'}"
+        <ngx-skeleton-loader count="1" [theme]="{ 'border-radius': '25px', 'margin-bottom': '25px', height: '45px'}"
           appearance="line">
         </ngx-skeleton-loader>
       </div>

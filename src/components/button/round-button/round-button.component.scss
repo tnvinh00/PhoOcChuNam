@@ -5,7 +5,7 @@
   width: 200px;
   @include breakpoint('max', '540px'){
     border: 1px solid $color-main;
-    width: 150px!important;
+    width: 180px!important;
   }
   .button-text {
     margin-right: 5px;

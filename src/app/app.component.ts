@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MAT_TOOLTIP_DEFAULT_OPTIONS, MatTooltipDefaultOptions } from '@angular/material/tooltip';
 import { TranslateService } from '@ngx-translate/core';
-import { Title } from '@angular/platform-browser';
 
 export const myCustomTooltipDefaults: MatTooltipDefaultOptions = {
   showDelay: 100,
@@ -23,7 +22,6 @@ export class AppComponent {
 
   constructor(
     private translate: TranslateService,
-    private titleService: Title
   ) {
     translate.addLangs(['vn', 'en']);
     translate.setDefaultLang('vn');
@@ -40,9 +38,9 @@ export class AppComponent {
       config.language = translate.currentLang;
       localStorage.setItem('config', JSON.stringify(config));
     }
+  }
 
-    this.translate.get('tileWebsite').subscribe((res: string) => {
-      this.titleService.setTitle(res);
-    });
+  OnInit() {
+    window.scrollTo(0, 0);
   }
 }

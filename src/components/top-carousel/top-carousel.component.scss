@@ -2,7 +2,6 @@
 @import '/src/styles/scss/mixins.scss';
 
 .carousel-main {
-  // position: relative;
   height: 100%;
   // max-height: 500px;
 
@@ -74,9 +73,14 @@
         height: 60vh;
       }
 
+      @include breakpoint('max', '768px') {
+        filter: brightness(90%);
+        height: 50vh;
+      }
+
       @include breakpoint('max', '540px') {
         filter: brightness(90%);
-        height: 40vh;
+        height: 35vh;
       }
     }
   }

@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ViewportScroller } from '@angular/common';
+import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-top-bar',
@@ -8,10 +10,48 @@ import { Router } from '@angular/router';
 })
 export class TopBarComponent implements OnInit {
   activeLink: string;
-  constructor(private router: Router) {}
+  isshow: boolean = false;
+  icon = 'menu';
+
+  @HostListener("document:click")
+  clickedOut() {
+    this.onClick(event);
+  }
+
+  constructor(
+    private router: Router,
+    private scroller: ViewportScroller,
+    private _eref: ElementRef
+  ) { }
 
   ngOnInit() {
-    this.activeLink = this.router.url.split('/').slice(1,2)[0];
-    console.log(this.activeLink);
+    this.router.events
+      .pipe(filter((event: any) => event instanceof NavigationEnd))
+      .subscribe((e: any) => {
+        this.activeLink = e.url.split('/').slice(1, 2)[0];
+      });
+  }
+
+  gotoContacts() {
+    this.isshow = false;
+    this.scroller.scrollToAnchor('lien-he');
+  }
+
+  onClickOpenMenu() {
+    this.isshow = !this.isshow;
+    this.icon = this.icon === 'menu' ? 'close' : 'menu';
+  }
+
+  onClickMenu(e) {
+    this.activeLink = e.toString();
+    this.isshow = false;
+    this.icon = 'menu';
+  }
+
+  onClick(event){
+    if (!this._eref.nativeElement.contains(event.target)){
+      this.isshow = false;
+      this.icon = 'menu';
+    }
   }
 }

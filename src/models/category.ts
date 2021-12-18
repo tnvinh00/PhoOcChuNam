@@ -5,6 +5,6 @@ export class Category {
   nameENG: string;
   nameCHI: string;
   desc: string;
-  status: boolean;
+  seafood: string;
   note: string;
 }

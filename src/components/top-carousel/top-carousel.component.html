@@ -5,10 +5,10 @@
     <p class="content-description">{{ 'description' | translate }}</p>
     <p class="content-open">{{ 'openAt.text' | translate }}<b>{{ 'openAt.time' | translate }}</b></p>
     <div class="carousel-button">
-      <app-round-button [text]="'Đặt bàn'" class="mr-2" [icon]="'phone_enabled'" (click)="onClickBook()">
+      <app-round-button [text]="'action.book' | translate" class="mr-2 mb-2" [icon]="'phone_enabled'" (click)="onOpenBranch()">
       </app-round-button> {{" "}}
-      <app-round-button [text]="'Xem menu'" [icon]="'restaurant_menu'" [color]="'#FFFFFF'" [textColor]="'#F44336'"
-        (click)="onClickContact()">
+      <app-round-button [text]="'action.seemenu' | translate" [icon]="'restaurant_menu'" [color]="'#FFFFFF'" [textColor]="'#F44336'"
+        (click)="onOpenMenu()">
       </app-round-button>
     </div>
   </div>
@@ -20,7 +20,7 @@
           <img [src]="item.image" alt="Random slide">
         </div>
         <div class="carousel-caption">
-          <h5 class="m-0">{{item.subtitle}}</h5>
+          <h6 class="m-0">{{item.subtitle}}</h6>
         </div>
       </ng-template>
     </ngb-carousel>
@@ -33,7 +33,7 @@
           <img [src]="'assets/images/logo/loading.gif'" alt="Loading slide">
         </div>
         <div class="carousel-caption">
-          <h5 class="m-0">{{ 'const.loading' | translate }}</h5>
+          <h6 class="m-0">{{ 'const.loading' | translate }}</h6>
         </div>
       </ng-template>
     </ngb-carousel>
@@ -46,10 +46,10 @@
   <p class="content-description">{{ 'description' | translate }}</p>
   <p class="content-open">{{ 'openAt.text' | translate }}<b>{{ 'openAt.time' | translate }}</b></p>
   <div class="carousel-button">
-    <app-round-button [text]="'Đặt bàn'" class="mr-2" [icon]="'phone_enabled'" (click)="onClickBook()">
+    <app-round-button [text]="'action.book' | translate" class="mr-2" [icon]="'phone_enabled'" (click)="onOpenBranch()">
     </app-round-button> {{" "}}
-    <app-round-button [text]="'Xem menu'" [icon]="'restaurant_menu'" [color]="'#FFFFFF'" [textColor]="'#F44336'"
-      (click)="onClickContact()">
+    <app-round-button [text]="'action.seemenu' | translate" [icon]="'restaurant_menu'" [color]="'#FFFFFF'" [textColor]="'#F44336'"
+      (click)="onOpenMenu()">
     </app-round-button>
   </div>
 </div>

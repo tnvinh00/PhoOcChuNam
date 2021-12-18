@@ -1,0 +1,151 @@
+@import '/src/styles/scss/variables.scss';
+@import '/src/styles/scss/mixins.scss';
+
+.top-section {
+  padding-top: 20px;
+
+  .menu-image {
+    height: 150px;
+  }
+
+  .menu-title {
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.main-section {
+  text-align: center;
+
+  .text-category {
+    font-weight: 700;
+  }
+
+  .text-result {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: $color-gray-1;
+    text-align: left;
+
+    @include breakpoint('min', '768px') {
+      text-align: right;
+    }
+  }
+
+  .section-left {
+    @include breakpoint('min', '992px') {
+      border-right: 3px solid $color-main;
+    }
+
+    @include breakpoint('max', '992px') {
+      border-bottom: 3px solid $color-main;
+    }
+  }
+
+  .section-right {
+    .text-noresult {
+      margin-top: 30px;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+  }
+
+  .card-food {
+    border: 1px solid $color-main;
+    background-color: $color-card;
+    border-radius: 10px;
+
+    .card-body {
+      padding: 0;
+
+      .card-image-block {
+        border-radius: 10px 10px 0 0;
+
+        img {
+          width: 100%;
+          height: 180px;
+          object-fit: cover;
+
+          @include breakpoint('min', '768px') {
+            height: 150px;
+          }
+        }
+      }
+
+      .card-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 75px;
+        padding: 0 15px;
+        text-align: center;
+
+        .text-food {
+          margin: 0;
+          font-size: 1.1rem;
+          font-weight: 500;
+          overflow: hidden;
+          display: -webkit-box;
+          color: $color-main;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+
+          @include breakpoint('max', '768px') {
+            font-size: 1rem;
+          }
+        }
+      }
+
+      .card-divider {
+        width: 80px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        height: 1px;
+        background-color: $color-main;
+      }
+
+      .card-price-text {
+        text-align: center;
+        margin-bottom: 15px;
+
+        span {
+          font-weight: 500;
+        }
+
+        @include breakpoint('max', '640px') {
+          span {
+            font-size: 1rem;
+          }
+        }
+
+        // :last-child {
+        //   color: $color-main;
+        // }
+      }
+    }
+  }
+}
+
+.card-food {
+  box-shadow: 0 5px 20px rgb(0 0 0 / 5%);
+}
+
+.card-category:hover,
+.card-food:hover {
+  box-shadow: 0 5px 20px rgb(0 0 0 / 20%);
+  transform: translateY(-3px);
+  transition: all 0.2s ease-in-out;
+
+  .card-image {
+    transform: scale(1.05);
+  }
+}
+
+.col-sm-3 {
+  width: 33.3% !important;
+}
