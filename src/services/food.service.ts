@@ -23,6 +23,11 @@ export class FoodService {
     return this.httpClient.get<Category[]>(`assets/mockData/category.json`).pipe()
   }
 
+  getCategorySpecial(): Observable<Category[]> {
+    // return this.httpClient.get<Category[]>(`${apiUrl}/category`).pipe()
+    return this.httpClient.get<Category[]>(`assets/mockData/category_special.json`).pipe()
+  }
+
   getFood(): Observable<Food[]> {
     // return this.httpClient.get<Food[]>(`${apiUrl}/food`).pipe()
     return this.httpClient.get<Food[]>(`assets/mockData/food.json`).pipe()

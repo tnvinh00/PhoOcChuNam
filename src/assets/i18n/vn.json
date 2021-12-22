@@ -37,7 +37,7 @@
     "3": {
       "title": "Không gian rộng rãi",
       "description": "Không gian rộng rãi thoáng mát phục vụ tiệc, sinh nhật, tất niên, cưới, hỏi ...",
-      "image": "https://res.cloudinary.com/tnvinh00/image/upload/v1639773813/PhoOcChuNam/248983859_403780808069984_5321418502231262925_n_sgguch.jpg"
+      "image": "https://res.cloudinary.com/tnvinh00/image/upload/v1639947246/PhoOcChuNam/image_2_rhp3ha.png"
     },
     "4": {
       "title": "Nhân viên chu đáo",
@@ -50,7 +50,8 @@
       "label": "Tìm kiếm món ăn tại đây",
       "placeholder": "Nhập tên món ăn cần tìm",
       "hint": "Ví dụ: Cua, Cá tầm, ..."
-    }
+    },
+    "tooltip": "Liên hệ SĐT để đặt bàn trước và chọn món."
   },
   "notfound": {
     "title": "Không tìm thấy trang",
@@ -61,23 +62,29 @@
   "const": {
     "price": "Giá: ",
     "phone": "Số điện thoại",
+    "mst": "Mã số thuế",
     "phone2": "SĐT",
     "website": "Website",
     "address": "Địa chỉ",
     "branch": "Chi nhánh",
     "contact": "Liên hệ",
+    "book": "Liên hệ đặt bàn",
     "menu": "Thực đơn",
     "category": "Danh mục món ăn",
     "email": "Email",
     "fanpage": "Fanpage",
     "loading": "Đang tải ...",
     "gotoTop": "Lên đầu trang",
-    "result": "(Có {{result}} món ăn)",
+    "result": "Có {{result}} món ăn",
     "noresult": "Không tìm thấy món ăn '{{searchString}}'. Vui lòng thử lại.",
-    "developer": "Developer by "
+    "developer": "Developer by ",
+    "special": "Chỉ có tại chi nhánh Hầm rượu Phố Ốc Chú Năm 3",
+    "special_short": "(* : Chỉ có tại CN3)",
+    "image": "Hình ảnh có thể khác so với thực tế!"
   },
   "homeheader": {
     "seafood": "Hải sản tươi sống",
+    "seafood_special": "Hải sản cao cấp",
     "trend": "Món ăn nổi bật",
     "branch": "Chi nhánh",
     "branch_sub": "Gọi điện cho chúng tôi để đặt bàn ngay.",
@@ -92,17 +99,17 @@
     "branch1": {
       "title": "CN1: ",
       "description": "An Phú, Thuận An, BD - ",
-      "contact": "0965321515"
+      "contact": "0975357059"
     },
     "branch2": {
       "title": "CN2: ",
       "description": "Khánh Bình, Tân Uyên, BD - ",
-      "contact": "0965321515"
+      "contact": "0974798651"
     },
     "branch3": {
       "title": "CN3: ",
       "description": "Bình Chuẩn, Thuận An, BD - ",
-      "contact": "0965321515"
+      "contact": "0987333117"
     }
   }
 }

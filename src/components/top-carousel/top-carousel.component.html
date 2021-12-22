@@ -19,8 +19,8 @@
         <div class="picsum-img-wrapper">
           <img [src]="item.image" alt="Random slide">
         </div>
-        <div class="carousel-caption">
-          <h6 class="m-0">{{item.subtitle}}</h6>
+        <div class="carousel-caption p-0">
+          <p class="m-0">{{item.subtitle}}</p>
         </div>
       </ng-template>
     </ngb-carousel>
@@ -32,8 +32,8 @@
         <div class="picsum-img-wrapper">
           <img [src]="'assets/images/logo/loading.gif'" alt="Loading slide">
         </div>
-        <div class="carousel-caption">
-          <h6 class="m-0">{{ 'const.loading' | translate }}</h6>
+        <div class="carousel-caption p-0">
+          <p class="m-0">{{ 'const.loading' | translate }}</p>
         </div>
       </ng-template>
     </ngb-carousel>

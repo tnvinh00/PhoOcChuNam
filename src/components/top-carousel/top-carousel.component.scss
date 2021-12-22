@@ -19,7 +19,7 @@
       margin-left: 80px;
     }
 
-    @include breakpoint('max', '640px') {
+    @include breakpoint('max', '768px') {
       margin-top: 30px;
       display: none;
     }
@@ -66,7 +66,7 @@
     img {
       object-fit: cover;
       width: 100%;
-      height: 80vh;
+      height: 600px;
       filter: brightness(60%);
 
       @include breakpoint('max', '960px') {
@@ -94,6 +94,14 @@
 
 .carousel-caption {
   padding-bottom: 10px;
+
+  p {
+    font-size: 1.1rem;
+
+    @include breakpoint('max', '768px') {
+      font-size: 0.7rem;
+    }
+  }
 }
 
 .carousel-responsive {
@@ -101,7 +109,7 @@
   display: none;
   padding: 10px 20px;
 
-  @include breakpoint('max', '640px') {
+  @include breakpoint('max', '768px') {
     display: block;
   }
 

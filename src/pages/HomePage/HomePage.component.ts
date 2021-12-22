@@ -34,13 +34,41 @@ export class HomePageComponent implements OnInit {
         items: 2
       },
       600: {
-        items: 2
-      },
-      740: {
         items: 3
       },
-      940: {
+      740: {
         items: 4
+      },
+      940: {
+        items: 5
+      }
+    },
+    nav: false
+  }
+
+  customOptions_special: OwlOptions = {
+    loop: true,
+    dots: false,
+    autoplay: true,
+    center: false,
+    autoWidth: true,
+    autoplayTimeout: 5000,
+    navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
+    responsive: {
+      0: {
+        items: 1
+      },
+      350: {
+        items: 2
+      },
+      600: {
+        items: 3
+      },
+      740: {
+        items: 4
+      },
+      940: {
+        items: 5
       }
     },
     nav: false
@@ -52,23 +80,23 @@ export class HomePageComponent implements OnInit {
     autoplay: true,
     center: false,
     autoWidth: true,
-    autoplayTimeout: 50000,
+    autoplayTimeout: 6000,
     navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
     responsive: {
       0: {
         items: 1
       },
-      420: {
+      350: {
         items: 2
       },
       600: {
-        items: 2
-      },
-      740: {
         items: 3
       },
-      940: {
+      740: {
         items: 4
+      },
+      940: {
+        items: 5
       }
     },
     nav: false
@@ -77,6 +105,7 @@ export class HomePageComponent implements OnInit {
   food_odd = [];
   food_even = [];
   category = [];
+  category_special = [];
   branch = [];
 
   ngOnInit() {
@@ -96,8 +125,8 @@ export class HomePageComponent implements OnInit {
         //     return a.rate < b.rate ? -1 : 1
         //   }
         // })
-        this.food_odd = data.filter((item, index) => index % 2 == 0);
-        this.food_even = data.filter((item, index) => index % 2 != 0);
+        this.food_odd = data.filter((item, index) => index % 2 == 0).sort((a, b) => 0.5 - Math.random());;
+        this.food_even = data.filter((item, index) => index % 2 != 0).sort((a, b) => 0.5 - Math.random());;
         if (data.length % 2 != 0)
           this.food_even.push(data[data.length - 1]);
       }, 3000)
@@ -109,23 +138,33 @@ export class HomePageComponent implements OnInit {
       }, 3000)
     });
 
+    this.foodService.getCategorySpecial().subscribe((data: any) => {
+      setTimeout(() => {
+        this.category_special = data.filter(item => item.seafood == "1");
+      }, 3000)
+    });
+
     this.foodService.getBranch().subscribe(data => {
       setTimeout(() => {
         this.branch = data;
       }, 3000)
     });
 
-    this.foodService.getNotification().subscribe(data => {
-      setTimeout(() => {
-        data = data.filter(item => item.status == "1");
-        data.forEach(item => {
-          Swal.fire({
-            title: item.title,
-            text: item.content,
-            icon: "success",
+    if (!localStorage.getItem('lastVisited')) {
+      localStorage.setItem('lastVisited', new Date().toLocaleString());
+
+      this.foodService.getNotification().subscribe(data => {
+        setTimeout(() => {
+          data = data.filter(item => item.status == "1");
+          data.forEach(item => {
+            Swal.fire({
+              title: item.title,
+              text: item.content,
+              icon: "success",
+            })
           })
-        })
-      }, 3000)
-    });
+        }, 2000)
+      });
+    }
   }
 }

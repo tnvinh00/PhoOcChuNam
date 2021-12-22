@@ -31,7 +31,9 @@ export class TopCarouselComponent implements OnInit {
 
   ngOnInit() {
     this.foodService.getCarousel().subscribe(data => {
-      this.carousel = data;
+      setTimeout(() => {
+        this.carousel = data;
+      }, 2000);
     });
   }
   onOpenMenu() {

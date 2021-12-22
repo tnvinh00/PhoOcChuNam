@@ -1,5 +1,5 @@
 import { ViewportScroller } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { TranslateService } from '@ngx-translate/core';
 import { FoodService } from 'services/food.service';
@@ -10,7 +10,16 @@ import StringUtils from 'utils/string';
   templateUrl: './MenuPage.component.html',
   styleUrls: ['./MenuPage.component.scss']
 })
+
 export class MenuPageComponent implements OnInit {
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event: any) {
+    // visible height + pixel scrolled >= total height 
+    if (event.target.offsetHeight + event.target.scrollTop >= event.target.scrollHeight) {
+      console.log("End");
+    }
+  }
+
   listFoods = [];
   foods = [];
   categories = [];
@@ -90,18 +99,18 @@ export class MenuPageComponent implements OnInit {
     else {
 
       this.foods = this.listFoods.filter(({ categoryId }) => categoryId === e.toString());
-      this.foods.sort(function (a, b) {
-        var nameA = a.title.toUpperCase(); // ignore upper and lowercase
-        var nameB = b.title.toUpperCase(); // ignore upper and lowercase
-        if (nameA < nameB) {
-          return -1;
-        }
-        if (nameA > nameB) {
-          return 1;
-        }
-        // names must be equal
-        return 0;
-      });
+      // this.foods.sort(function (a, b) {
+      //   var nameA = a.title.toUpperCase(); // ignore upper and lowercase
+      //   var nameB = b.title.toUpperCase(); // ignore upper and lowercase
+      //   if (nameA < nameB) {
+      //     return -1;
+      //   }
+      //   if (nameA > nameB) {
+      //     return 1;
+      //   }
+      //   // names must be equal
+      //   return 0;
+      // });
     }
     this.paramTranslate = {
       result: this.foods.length || 0,

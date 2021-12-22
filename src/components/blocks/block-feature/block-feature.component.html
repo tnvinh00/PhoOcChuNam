@@ -1,8 +1,8 @@
-<div class="block-feature">
+<div class="block-feature mt-5">
   <div class="container">
     <div class="row">
       <ng-template [ngIf]="features.length > 0" [ngIfElse]="loading">
-        <div class="col-12 col-md-6 col-lg-3 px-0" *ngFor="let item of features">
+        <div class="col-6 col-md-6 col-lg-3 px-0" *ngFor="let item of features">
           <div class="text-center p-2 feature-card animated animatedFadeInUp fadeInUp">
             <img src="{{item.image}}" class="image-feature" alt="Image Feature" />
             <p class="text-feature-title mt-3">{{item.title}}</p>
@@ -11,13 +11,13 @@
         </div>
       </ng-template>
       <ng-template #loading>
-        <div class="col-12 col-md-6 col-lg-3" *ngFor="let item of [1,2,3,4]">
+        <div class="col-6 col-md-6 col-lg-3" *ngFor="let item of [1,2,3,4]">
           <div class="text-center">
             <ngx-skeleton-loader count="1" [theme]="{ height: '75px', width: '75px' }" appearance="circle"></ngx-skeleton-loader>
             <div class="px-5">
               <ngx-skeleton-loader count="1"></ngx-skeleton-loader>
             </div>
-            <ngx-skeleton-loader count="1" [theme]="{ height: '70px' }"></ngx-skeleton-loader>
+            <ngx-skeleton-loader count="1" [theme]="{ height: '90px' }"></ngx-skeleton-loader>
           </div>
         </div>
       </ng-template>

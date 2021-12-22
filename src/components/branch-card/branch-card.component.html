@@ -3,7 +3,7 @@
     <div class="card-body px-0 pt-0">
       <div class="card-image-block w-auto overflow-hidden">
         <a class="text-decoration" [routerLink]="['/chi-nhanh', branch.slug]">
-          <img class="card-branch-image" [src]="branch.image[0]"
+          <img class="card-branch-image" [src]="branch.image[0]" loading="lazy" 
             onerror="this.onerror=null;this.src='https://res.cloudinary.com/tnvinh00/image/upload/v1639495889/PhoOcChuNam/QJzMcF1_n42ptl.png'"
             alt="Card image cap">
         </a>

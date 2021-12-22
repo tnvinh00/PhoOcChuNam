@@ -10,6 +10,11 @@
     height: 100px;
     width: 100px;
     object-fit: cover;
+
+    @include breakpoint('max', '768px') {
+      height: 90px;
+      width: 90px;
+    }
   }
 
 
@@ -17,11 +22,19 @@
     .text-feature-title {
       font-size: 1.2rem;
       font-weight: 600;
+
+      @include breakpoint('max', '768px') {
+        font-size: 1.1rem;
+      }
     }
 
     .text-feature-description {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       animation-delay: 0.5s;
+
+      @include breakpoint('max', '768px') {
+        font-size: 0.95rem;
+      }
     }
 
     border-radius: 10px;

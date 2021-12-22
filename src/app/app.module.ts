@@ -34,6 +34,7 @@ import { BlockFeatureComponent } from 'components/blocks/block-feature/block-fea
 import { BlockContactComponent } from 'components/blocks/block-contact/block-contact.component';
 import { ScrollTopButtonComponent } from 'components/button/scroll-top-button/scroll-top-button.component';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { SafePipe } from 'pipes/safe.pipe';
 
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: HttpClient) {
@@ -43,6 +44,7 @@ export function createTranslateLoader(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
+    SafePipe,
     HomePageComponent,
     MenuPageComponent,
     BranchPageComponent,

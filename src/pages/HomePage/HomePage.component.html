@@ -14,7 +14,7 @@
             <div class="card card-category mx-2 mx-sm-1">
               <div class="card-body">
                 <div class="w-auto overflow-hidden border rounded rounded-lg">
-                  <img class="card-image" [src]="item.image"
+                  <img class="card-image" [src]="item.image" loading="lazy"
                     onerror="this.onerror=null;this.src='https://res.cloudinary.com/tnvinh00/image/upload/v1639812672/PhoOcChuNam/image-temp_vcczhz.png'"
                     alt="Card image cap">
                 </div>
@@ -34,7 +34,58 @@
   <div class="container general-section">
     <div class="w-100">
       <owl-carousel-o [options]="customOptions">
-        <ng-template carouselSlide *ngFor="let i of [1,2,3,4]">
+        <ng-template carouselSlide *ngFor="let i of [1,2,3,4,5]">
+          <div class="py-3">
+            <div class="card card-category m-1 mx-sm-1">
+              <div class="card-body">
+                <ngx-skeleton-loader count="1"
+                  [theme]="{ 'border-radius': '10px', 'margin-bottom': '25px', height: '150px'}" appearance="line">
+                </ngx-skeleton-loader>
+                <div class="px-5">
+                  <ngx-skeleton-loader count="1" appearance="line"></ngx-skeleton-loader>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </owl-carousel-o>
+    </div>
+  </div>
+</ng-template>
+
+<!-- Section seafood Special-->
+<p class="section-header text-main">{{ 'homeheader.seafood_special' | translate }}</p>
+<p class="section-subtile"><i>{{ 'const.special' | translate }}</i></p>
+<ng-template [ngIf]="category.length > 0" [ngIfElse]="loading">
+  <div class="container general-section">
+    <div class="w-100">
+      <owl-carousel-o [options]="customOptions_special">
+        <ng-template carouselSlide *ngFor="let item of category_special">
+          <div class="py-3">
+            <div class="card card-category mx-2 mx-sm-1 border-main">
+              <div class="card-body">
+                <div class="w-auto overflow-hidden border rounded rounded-lg">
+                  <img class="card-image" [src]="item.image" loading="lazy"
+                    onerror="this.onerror=null;this.src='https://res.cloudinary.com/tnvinh00/image/upload/v1639812672/PhoOcChuNam/image-temp_vcczhz.png'"
+                    alt="Card image cap">
+                </div>
+                <div class="card-content">
+                  <p class="card-title-text text-seafood" matTooltip={{item.title}}>{{item.title}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </owl-carousel-o>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #loading>
+  <div class="container general-section">
+    <div class="w-100">
+      <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide *ngFor="let i of [1,2,3,4,5]">
           <div class="py-3">
             <div class="card card-category m-1 mx-sm-1">
               <div class="card-body">
@@ -55,21 +106,25 @@
 
 <!-- Section trend food -->
 <p class="section-header">{{ 'homeheader.trend' | translate }}</p>
+<p class="section-subtile">{{ 'const.special_short' | translate }}</p>
 <ng-template [ngIf]="category.length > 0" [ngIfElse]="loading2">
   <div class="container general-section">
     <div class="w-100">
       <owl-carousel-o [options]="customOptions_food">
         <ng-template carouselSlide *ngFor="let item of food_odd; let i = index;">
           <div class="pt-2 pb-1">
-            <div class="card card-trend m-2 m-sm-1">
+            <div class="card card-trend m-1 m-sm-1" matTooltip="{{'menupage.tooltip' | translate}}">
               <div class="card-body">
+                <div class="card-food-overlay d-flex justify-content-between position-absolute w-100" *ngIf="item.note">
+                  <div class="bg-main d-flex align-items-center px-3 py-0">*</div>
+                </div>
                 <div class="card-image-block w-auto overflow-hidden">
-                  <img class="card-image" [src]="item.image"
+                  <img class="card-image" [src]="item.image" loading="lazy"
                     onerror="this.onerror=null;this.src='https://res.cloudinary.com/tnvinh00/image/upload/v1639812672/PhoOcChuNam/image-temp_vcczhz.png'"
                     alt="Card image cap">
                 </div>
                 <div class="card-content px-2">
-                  <p class="card-title-text text-food px-1" matTooltip={{item.title}}>{{item.title}}</p>
+                  <p class="card-title-text text-food px-1">{{item.title}}</p>
                 </div>
                 <hr class="card-divider" />
                 <div class="card-price-text">
@@ -80,15 +135,19 @@
             </div>
           </div>
           <div class="pb-2">
-            <div class="card card-trend m-2 m-sm-1">
+            <div class="card card-trend m-1 m-sm-1" matTooltip="{{'menupage.tooltip' | translate}}">
               <div class="card-body">
+                <div class="card-food-overlay d-flex justify-content-between position-absolute w-100"
+                  *ngIf="food_even[i].note">
+                  <div class="bg-main d-flex align-items-center px-3 py-0">*</div>
+                </div>
                 <div class="card-image-block w-auto overflow-hidden">
-                  <img class="card-image" [src]="food_even[i].image"
+                  <img class="card-image" [src]="food_even[i].image" loading="lazy"
                     onerror="this.onerror=null;this.src='https://res.cloudinary.com/tnvinh00/image/upload/v1639812672/PhoOcChuNam/image-temp_vcczhz.png'"
                     alt="Card image cap">
                 </div>
                 <div class="card-content px-2">
-                  <p class="card-title-text text-food" matTooltip={{food_even[i].title}}>{{food_even[i].title}}</p>
+                  <p class="card-title-text text-food">{{food_even[i].title}}</p>
                 </div>
                 <hr class="card-divider" />
                 <div class="card-price-text">
@@ -108,9 +167,9 @@
   <div class="container general-section">
     <div class="w-100">
       <owl-carousel-o [options]="customOptions_food">
-        <ng-template carouselSlide *ngFor="let i of [1,2,3,4]">
+        <ng-template carouselSlide *ngFor="let i of [1,2,3,4,5]">
           <div class="pt-2 pb-1">
-            <div class="card card-trend m-2 m-sm-1">
+            <div class="card card-trend m-1 m-sm-1">
               <div class="card-body">
                 <ngx-skeleton-loader count="1"
                   [theme]="{ 'border-radius': '10px 10px 0 0', 'margin-bottom': '25px', height: '150px'}"
@@ -127,7 +186,7 @@
             </div>
           </div>
           <div class="pb-2">
-            <div class="card card-trend m-2 m-sm-1">
+            <div class="card card-trend m-1 m-sm-1">
               <div class="card-body">
                 <ngx-skeleton-loader count="1"
                   [theme]="{ 'border-radius': '10px 10px 0 0', 'margin-bottom': '25px', height: '150px'}"

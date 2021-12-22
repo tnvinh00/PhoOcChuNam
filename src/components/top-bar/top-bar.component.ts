@@ -33,8 +33,9 @@ export class TopBarComponent implements OnInit {
   }
 
   gotoContacts() {
-    this.isshow = false;
     this.scroller.scrollToAnchor('lien-he');
+    this.isshow = false;
+    this.icon = 'menu';
   }
 
   onClickOpenMenu() {

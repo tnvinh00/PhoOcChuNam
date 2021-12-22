@@ -1,23 +1,88 @@
-<nav mat-tab-nav-bar mat-stretch-tabs class="mt-4" dynamicHeight [color]="'warn'">
-  <!-- <a mat-tab-link routerLink='chi-nhanh/pho-oc-chu-nam-1' (click)="activeTab = 'pho-oc-chu-nam-1'"
-    [active]="activeTab == 'pho-oc-chu-nam-1'">
-    {{'branch.1' | translate}}
-  </a>
-  <a mat-tab-link routerLink='chi-nhanh/pho-oc-chu-nam-2' (click)="activeTab = 'pho-oc-chu-nam-2'"
-    [active]="activeTab == 'pho-oc-chu-nam-2'">
-    {{'branch.2' | translate}}
-  </a>
-  <a mat-tab-link routerLink='chi-nhanh/ham-ruou-pho-oc-chu-nam-3' (click)="activeTab = 'ham-ruou-pho-oc-chu-nam-3''"
-    [active]="activeTab == 'ham-ruou-pho-oc-chu-nam-3'">
-    {{'branch.3' | translate}}
-  </a> -->
-</nav>
-
-<!-- <p>{{id}}</p> -->
-
 <div class="container">
   <div class="top-section text-center">
-    <img src="assets/images/menu.png" alt="menu" class="menu-image">
+    <img src="assets/images/branch.png" alt="menu" class="menu-image">
     <p class="menu-title">{{ 'const.branch' | translate }}</p>
   </div>
+  <nav mat-tab-nav-bar mat-stretch-tabs class="navigation-tab mt-4" dynamicHeight [color]="'warn'">
+    <a mat-tab-link routerLink='/chi-nhanh/pho-oc-chu-nam-1' (click)="onChangeTab('pho-oc-chu-nam-1')"
+      [active]="activeTab == 'pho-oc-chu-nam-1'">
+      {{'branch.1' | translate | uppercase}}
+    </a>
+    <a mat-tab-link routerLink='/chi-nhanh/pho-oc-chu-nam-2' (click)="onChangeTab('pho-oc-chu-nam-2')"
+      [active]="activeTab == 'pho-oc-chu-nam-2'">
+      {{'branch.2' | translate | uppercase}}
+    </a>
+    <a mat-tab-link routerLink='/chi-nhanh/ham-ruou-pho-oc-chu-nam-3' (click)="onChangeTab('ham-ruou-pho-oc-chu-nam-3')"
+      [active]="activeTab == 'ham-ruou-pho-oc-chu-nam-3'">
+      {{'branch.3' | translate | uppercase}}
+    </a>
+  </nav>
+</div>
+
+
+<div class="container main-section">
+  <ng-template [ngIf]="branch != null" [ngIfElse]="loading">
+    <div class="row mt-4">
+      <div class="col-12 branch-title text-center">
+        <p>{{branch.name | uppercase}}</p>
+      </div>
+    </div>
+    <div class="row d-flex flex-md-row-reverse">
+      <div class="col-12 col-md-6 branch-info">
+        <div>
+          <div class="card-image-block w-auto overflow-hidden">
+            <owl-carousel-o [options]="customOptions">
+              <ng-template carouselSlide *ngFor="let item of branch.image">
+                <img class="card-branch-image" [src]="item" loading="lazy"
+                  onerror="this.onerror=null;this.src='https://res.cloudinary.com/tnvinh00/image/upload/v1639495889/PhoOcChuNam/QJzMcF1_n42ptl.png'"
+                  alt="Branch image">
+              </ng-template>
+            </owl-carousel-o>
+          </div>
+          <div class="px-3 pt-2">
+            <p class="card-branch-title">{{branch.company}}</p>
+            <div class="branch-info-text d-flex">
+              <span class="info-text-left">{{'const.mst' | translate}}:&#160;</span>
+              <span class="info-text-right">{{branch.mst}}</span>
+            </div>
+            <div class="branch-info-text d-flex">
+              <span class="info-text-left">{{'const.email' | translate}}:&#160;</span>
+              <span class="info-text-right">{{branch.email}}</span>
+            </div>
+            <div class="branch-info-text d-flex flex-direction-row">
+              <span class="info-text-left">{{'const.website' | translate}}:&#160;</span>
+              <a class="info-text-right" href="{{branch.website}}">{{branch.website}}</a>
+            </div>
+            <div class="branch-info-text d-flex flex-direction-row">
+              <span class="info-text-left">{{'const.address' | translate}}:&#160;</span>
+              <span class="info-text-right">{{branch.address}}</span>
+            </div>
+            <div class="branch-info-text d-flex flex-direction-row">
+              <span class="info-text-left">{{'const.phone2' | translate}}:&#160;</span>
+              <span *ngFor="let p of branch.phone" class="info-text-right">
+                <a href="tel:{{p}}">{{p}}&#160;</a>
+              </span>
+            </div>
+            <div class="branch-info-text d-flex flex-direction-row">
+              <span class="info-text-left">{{'const.fanpage' | translate}}:&#160;</span>
+              <a class="info-text-right" href="{{branch.link}}" target="_blank">{{branch.fanpage}}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <iframe [src]="branch.map | safe" width="100%" height="450" style="border:0;" allowfullscreen=""
+          loading="lazy"></iframe>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template #loading>
+    <div class="row">
+      <div class="col-12">
+        <div class="loading-spinner">
+          <mat-spinner color="warn" diameter=50></mat-spinner>
+        </div>
+      </div>
+    </div>
+  </ng-template>
 </div>

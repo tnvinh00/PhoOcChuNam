@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'menu', component: MenuPageComponent },
   { path: 'chi-nhanh', component: BranchPageComponent },
   { path: 'chi-nhanh/:slug', component: BranchPageComponent },
+  { path: '404', component: NotFoundPageComponent },
   { path: '**', component: NotFoundPageComponent }
 ];
 
