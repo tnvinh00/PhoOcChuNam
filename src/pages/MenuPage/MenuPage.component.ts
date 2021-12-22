@@ -12,14 +12,6 @@ import StringUtils from 'utils/string';
 })
 
 export class MenuPageComponent implements OnInit {
-  @HostListener('window:scroll', ['$event'])
-  onScroll(event: any) {
-    // visible height + pixel scrolled >= total height 
-    if (event.target.offsetHeight + event.target.scrollTop >= event.target.scrollHeight) {
-      console.log("End");
-    }
-  }
-
   listFoods = [];
   foods = [];
   categories = [];

@@ -41,7 +41,7 @@ export class TopCarouselComponent implements OnInit {
   }
 
   onOpenBranch() {
-    // this.router.navigate(['/chi-nhanh'])
-    this.scroller.scrollToAnchor('lien-he');
+    this.router.navigate(['/chi-nhanh'])
+    // this.scroller.scrollToAnchor('lien-he');
   }
 }
