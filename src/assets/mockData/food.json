@@ -235,6 +235,7 @@
     "status": "1",
     "rate": "1",
     "note": "1",
+    "image": "https://res.cloudinary.com/tnvinh00/image/upload/v1640282055/PhoOcChuNam/Food/tom_tich_hap_bia-min_yi1mse.jpg",
     "id": "22"
   },
   {
@@ -267,6 +268,7 @@
     "status": "1",
     "rate": "1",
     "note": "1",
+    "image": "https://res.cloudinary.com/tnvinh00/image/upload/v1640282040/PhoOcChuNam/Food/tom_tich_nuong_moi-min_io23cv.jpg",
     "id": "25"
   },
   {
@@ -2234,7 +2236,7 @@
     "trend": "1",
     "status": "1",
     "rate": "2",
-    "image": "https://res.cloudinary.com/tnvinh00/image/upload/v1639772997/PhoOcChuNam/Food/lau_hai_san-min_kspqeu.jpg",
+    "image": "https://res.cloudinary.com/tnvinh00/image/upload/v1640282060/PhoOcChuNam/Food/lau_hai_san-min_x6odfa.jpg",
     "id": "227"
   },
   {
@@ -2244,6 +2246,7 @@
     "trend": "0",
     "status": "1",
     "rate": "1",
+    "image": "https://res.cloudinary.com/tnvinh00/image/upload/v1640282120/PhoOcChuNam/Food/lau_thai-min_mkozkd.jpg",
     "id": "228"
   },
   {
@@ -2504,6 +2507,7 @@
     "trend": "0",
     "status": "1",
     "rate": "1",
+    "image": "https://res.cloudinary.com/tnvinh00/image/upload/v1640282057/PhoOcChuNam/Food/com_chien_duong_chau-min_tva8cz.jpg",
     "id": "255"
   },
   {
