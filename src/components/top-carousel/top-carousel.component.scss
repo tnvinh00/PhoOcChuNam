@@ -70,17 +70,17 @@
       filter: brightness(60%);
 
       @include breakpoint('max', '960px') {
-        height: 60vh;
+        height: 500px;
       }
 
       @include breakpoint('max', '768px') {
         filter: brightness(90%);
-        height: 50vh;
+        height: 400px;
       }
 
       @include breakpoint('max', '540px') {
         filter: brightness(90%);
-        height: 35vh;
+        height: 240px;
       }
     }
   }
