@@ -6,6 +6,20 @@
         <div class="w-100 d-flex justify-content-center">
           <img src="assets/images/logo/logo_light.png" width="200" class="img-fluid">
         </div>
+        <div class="col-12 mt-4 d-flex justify-content-center align-items-center">
+          <span>{{'footer.language.select' | translate}}</span>
+          <select class="ml-2 form-control form-control-sm col-6" #langSelect (change)="onChangeLanguage(langSelect.value)">
+            <option [selected]="currentLanguage == 'vi'" value="vi" style="background-image:url(assets/images/icon/vn.png);">
+              <span>{{'footer.language.vn.name' | translate}}</span>
+            </option>
+            <option [selected]="currentLanguage == 'en'" value="en">
+              <span>{{'footer.language.en.name' | translate}}</span>
+            </option>
+            <!-- <option [selected]="currentLanguage == 'zh'" value="zh">
+              <span>{{'footer.language.cn.name' | translate}}</span>
+            </option> -->
+          </select>
+        </div>
       </div>
       <div class="col-12 col-md-6 col-lg-4 footer-info mt-3">
         <p>{{'caption' | translate}}</p>

@@ -23,20 +23,20 @@ export class AppComponent {
   constructor(
     private translate: TranslateService,
   ) {
-    translate.addLangs(['vn', 'en']);
-    translate.setDefaultLang('vn');
+    translate.addLangs(['vi', 'en', 'zh']);
+    translate.setDefaultLang('vi');
 
     if (JSON.parse(localStorage.getItem('config'))?.language) {
       translate.use(JSON.parse(localStorage.getItem('config')).language);
     }
     else {
       const browserLang = this.translate.getBrowserLang();
-      // this.translate.use(browserLang.match(/vn|en/) ? browserLang : 'vn');
-      this.translate.use('vn');
+      // this.translate.use(browserLang.match(/vi|en/) ? browserLang : 'vi');
+      this.translate.use('vi');
 
-      const config = JSON.parse(localStorage.getItem('config')) || {};
-      config.language = translate.currentLang;
-      localStorage.setItem('config', JSON.stringify(config));
+      // const config = JSON.parse(localStorage.getItem('config')) || {};
+      // config.language = this.translate.currentLang;
+      // localStorage.setItem('config', JSON.stringify(config));
     }
   }
 

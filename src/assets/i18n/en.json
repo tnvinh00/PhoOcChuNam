@@ -1,0 +1,133 @@
+{
+  "tileWebsite": {
+    "home": "Pho Oc Chu Nam Restaurant - Fresh seafood, exclusive flavors - Accept orders for parties, birthdays, parties, year-end...",
+    "menu": "Menu - Pho Oc Chu Nam Restaurant - Fresh seafood, exclusive flavors - Accept orders for parties, birthdays, parties, year-end...",
+    "branch": "Branches - Pho Oc Chu Nam Restaurant - Fresh seafood, exclusive flavors - Accept orders for parties, birthdays, parties, year-end...",
+    "notfound": "Page not found - Pho Oc Chu Nam Restaurant - Fresh seafood, exclusive flavors - Accept orders for parties, birthdays, parties, year-end..."
+  },
+  "caption": "Restaurant system",
+  "name": "Pho Oc Chu Nam",
+  "description": "Specializing in serving fresh seafood, parties, weddings, birthdays, year-end parties, festivals...",
+  "openAt": {
+    "text": "Open time: ",
+    "time": "9:00 - 23:00"
+  },
+  "menu": {
+    "title1": "Home",
+    "title2": "Menu",
+    "title3": "Branch",
+    "title4": "Contact us"
+  },
+  "branch": {
+    "1": "Pho Oc Chu Nam 1",
+    "2": "Pho Oc Chu Nam 2",
+    "3": "Wine Cellar Pho Oc Chu Nam 3"
+  },
+  "features": {
+    "1": {
+      "title": "Exclusive taste",
+      "description": "The brand is confirmed with 5 years of experience in the fresh seafood industry.",
+      "image": "https://res.cloudinary.com/tnvinh00/image/upload/v1639773813/PhoOcChuNam/248983859_403780808069984_5321418502231262925_n_sgguch.jpg"
+    },
+    "2": {
+      "title": "Varied menu",
+      "description": "Fresh seafood caught at the tank, a menu of more than 300 dishes is ready to serve you.",
+      "image": "https://res.cloudinary.com/tnvinh00/image/upload/v1639773133/PhoOcChuNam/image_1_1_lnmkmg.png"
+    },
+    "3": {
+      "title": "Large space",
+      "description": "Spacious and airy space for parties, birthdays, year-ends, weddings, questions...",
+      "image": "https://res.cloudinary.com/tnvinh00/image/upload/v1639947246/PhoOcChuNam/image_2_rhp3ha.png"
+    },
+    "4": {
+      "title": "Attentive employee",
+      "description": "On-demand service staff help you have a delicious meal.",
+      "image": "https://res.cloudinary.com/tnvinh00/image/upload/v1639773880/PhoOcChuNam/262356873_260212049423593_4616937607343868844_n_jckfxh.jpg"
+    }
+  },
+  "menupage": {
+    "search": {
+      "label": "Search foods here",
+      "placeholder": "Type food you want to search",
+      "hint": "Ex: Crab, Fish, ..."
+    },
+    "tooltip": "Contact phone number to reserve a table and choose dishes."
+  },
+  "notfound": {
+    "title": "Page not found",
+    "description1": "The page you requested does not exist or has been removed.",
+    "description2": "Please check the link in your browser's address bar or return to the homepage.",
+    "action": "Back to Home page"
+  },
+  "const": {
+    "price": "Price: ",
+    "phone": "Phone number",
+    "mst": "Tax code",
+    "phone2": "Phone",
+    "website": "Website",
+    "address": "Address",
+    "branch": "Branch",
+    "contact": "Contact us",
+    "book": "Contact to book a table",
+    "menu": "Menu",
+    "category": "List of dishes",
+    "email": "Email",
+    "fanpage": "Fanpage",
+    "loading": "Loading ...",
+    "gotoTop": "Go to top",
+    "result": "Have {{result}} foods",
+    "noresult": "Not found '{{searchString}}'. Please try again.",
+    "developer": "Developer by ",
+    "special": "Only available at branch Wine Cellar Pho Oc Chu Nam 3",
+    "special_short": "(* : Only available at BR3)",
+    "image": "Pictures may differ from reality!"
+  },
+  "homeheader": {
+    "seafood": "Fresh seafood",
+    "seafood_special": "Premium seafood",
+    "trend": "Outstanding dishes",
+    "branch": "Branchs",
+    "branch_sub": "Call us to reserve a table now.",
+    "wellcome": "Happy to serve you"
+  },
+  "action": {
+    "seemenu": "View menu",
+    "book": "Book",
+    "direction": "Direct"
+  },
+  "footer": {
+    "branch1": {
+      "title": "BR1: ",
+      "description": "An Phu, Thuan An, Binh Duong - ",
+      "contact": "0975357059"
+    },
+    "branch2": {
+      "title": "BR2: ",
+      "description": "Khanh Binh, Tan Uyen, Binh Duong - ",
+      "contact": "0974798651"
+    },
+    "branch3": {
+      "title": "BR3: ",
+      "description": "Binh Chuan, Thuan An, Binh Duong - ",
+      "contact": "0987333117"
+    },
+    "language": {
+      "select": "Select language: ",
+      "vn": {
+        "name": "Vietnamese",
+        "code": "vn",
+        "flag": "assets/images/icon/vn.png"
+      },
+      "en": {
+        "name": "English",
+        "code": "en",
+        "flag": "assets/images/icon/en.png"
+      },
+      "cn": {
+        "name": "Chinese",
+        "code": "cn",
+        "flag": "assets/images/icon/cn.png"
+      }
+    }
+  }
+}

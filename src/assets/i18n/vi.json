@@ -25,13 +25,13 @@
   },
   "features": {
     "1": {
-      "title": "Hương hiệu độc quyền",
+      "title": "Hương vị độc quyền",
       "description": "Thương hiệu được khẳng định với 5 năm kinh nghiệm trong ngành hải sản tươi sống.",
       "image": "https://res.cloudinary.com/tnvinh00/image/upload/v1639773813/PhoOcChuNam/248983859_403780808069984_5321418502231262925_n_sgguch.jpg"
     },
     "2": {
       "title": "Thực đơn đa dạng",
-      "description": "Hải sản tươi sống bắt tại bể, thực đơn hơn 200 món ăn sẵn sàng phục vụ cho các bạn.",
+      "description": "Hải sản tươi sống bắt tại bể, thực đơn hơn 300 món ăn sẵn sàng phục vụ cho quý thực khách.",
       "image": "https://res.cloudinary.com/tnvinh00/image/upload/v1639773133/PhoOcChuNam/image_1_1_lnmkmg.png"
     },
     "3": {
@@ -56,7 +56,7 @@
   "notfound": {
     "title": "Không tìm thấy trang",
     "description1": "Trang bạn yêu cầu không tồn tại hoặc đã bị xóa.",
-    "description2": "Vui lòng kiểm tra lại địa chỉ trên thanh địa chỉ của trình duyệt hoặc trở lại trang chủ.",
+    "description2": "Vui lòng kiểm tra lại đường dẫn trên thanh địa chỉ của trình duyệt hoặc trở lại trang chủ.",
     "action": "Trở về trang chủ"
   },
   "const": {
@@ -110,6 +110,24 @@
       "title": "CN3: ",
       "description": "Bình Chuẩn, Thuận An, BD - ",
       "contact": "0987333117"
+    },
+    "language": {
+      "select": "Chọn ngôn ngữ: ",
+      "vn": {
+        "name": "Tiếng Việt",
+        "code": "vn",
+        "flag": "assets/images/icon/vn.png"
+      },
+      "en": {
+        "name": "Tiếng Anh",
+        "code": "en",
+        "flag": "assets/images/icon/en.png"
+      },
+      "cn": {
+        "name": "Tiếng Trung",
+        "code": "cn",
+        "flag": "assets/images/icon/cn.png"
+      }
     }
   }
 }

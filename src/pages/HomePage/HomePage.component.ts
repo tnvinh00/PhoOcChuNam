@@ -150,7 +150,12 @@ export class HomePageComponent implements OnInit {
       }, 2000)
     });
 
-    if (!localStorage.getItem('lastVisited')) {
+    let time;
+    if (localStorage.getItem('lastVisited'))
+      time = (new Date().getTime() - new Date(localStorage.getItem('lastVisited')).getTime()) / 1000 / 60 / 60 / 24;
+    else
+      time = 8
+    if (time > 7) {
       localStorage.setItem('lastVisited', new Date().toLocaleString());
 
       this.foodService.getNotification().subscribe(data => {
