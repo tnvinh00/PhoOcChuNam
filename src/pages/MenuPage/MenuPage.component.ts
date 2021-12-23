@@ -42,8 +42,8 @@ export class MenuPageComponent implements OnInit {
 
     this.foodService.getFood().subscribe(data => {
       setTimeout(() => {
-        this.foods = data;
         this.listFoods = data;
+        this.foods = data;
         this.paramTranslate = {
           result: this.foods.length || 0,
           searchString: this.currentSearchString

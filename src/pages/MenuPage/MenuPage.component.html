@@ -54,9 +54,8 @@
       <div class="col-12 col-md-12 col-lg-9 section-right">
         <div class="row">
           <ng-template [ngIf]="listFoods.length > 0" [ngIfElse]="loading">
-            <div class="col-6 col-md-4 col-lg-3 p-0" *ngFor="let item of foods"
-              matTooltip="{{'menupage.tooltip' | translate}}">
-              <div class="card card-food m-1">
+            <div class="col-6 col-md-4 col-lg-3 p-0" *ngFor="let item of foods">
+              <div class="card card-food m-1" title="{{'menupage.tooltip' | translate}}">
                 <div class="card-body">
                   <div class="card-food-overlay d-flex justify-content-between position-absolute w-100"
                     *ngIf="item.note">

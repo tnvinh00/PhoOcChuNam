@@ -129,25 +129,25 @@ export class HomePageComponent implements OnInit {
         this.food_even = data.filter((item, index) => index % 2 != 0).sort((a, b) => 0.5 - Math.random());;
         if (data.length % 2 != 0)
           this.food_even.push(data[data.length - 1]);
-      }, 3000)
+      }, 2000)
     });
 
     this.foodService.getCategory().subscribe((data: any) => {
       setTimeout(() => {
         this.category = data.filter(item => item.seafood == "1");
-      }, 3000)
+      }, 2000)
     });
 
     this.foodService.getCategorySpecial().subscribe((data: any) => {
       setTimeout(() => {
         this.category_special = data.filter(item => item.seafood == "1");
-      }, 3000)
+      }, 2000)
     });
 
     this.foodService.getBranch().subscribe(data => {
       setTimeout(() => {
         this.branch = data;
-      }, 3000)
+      }, 2000)
     });
 
     if (!localStorage.getItem('lastVisited')) {

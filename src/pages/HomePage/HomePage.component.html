@@ -113,7 +113,7 @@
       <owl-carousel-o [options]="customOptions_food">
         <ng-template carouselSlide *ngFor="let item of food_odd; let i = index;">
           <div class="pt-2 pb-1">
-            <div class="card card-trend m-1 m-sm-1" matTooltip="{{'menupage.tooltip' | translate}}">
+            <div class="card card-trend m-1 m-sm-1" title="{{'menupage.tooltip' | translate}}">
               <div class="card-body">
                 <div class="card-food-overlay d-flex justify-content-between position-absolute w-100" *ngIf="item.note">
                   <div class="bg-main d-flex align-items-center px-3 py-0">*</div>
@@ -135,7 +135,7 @@
             </div>
           </div>
           <div class="pb-2">
-            <div class="card card-trend m-1 m-sm-1" matTooltip="{{'menupage.tooltip' | translate}}">
+            <div class="card card-trend m-1 m-sm-1" title="{{'menupage.tooltip' | translate}}">
               <div class="card-body">
                 <div class="card-food-overlay d-flex justify-content-between position-absolute w-100"
                   *ngIf="food_even[i].note">
