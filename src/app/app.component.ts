@@ -23,7 +23,7 @@ export class AppComponent {
   constructor(
     private translate: TranslateService,
   ) {
-    translate.addLangs(['vi', 'en', 'zh']);
+    translate.addLangs(['vi', 'en']);
     translate.setDefaultLang('vi');
 
     if (JSON.parse(localStorage.getItem('config'))?.language) {

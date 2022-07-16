@@ -8,8 +8,10 @@
         </div>
         <div class="col-12 mt-4 d-flex justify-content-center align-items-center">
           <span>{{'footer.language.select' | translate}}</span>
-          <select class="ml-2 form-control form-control-sm col-6" #langSelect (change)="onChangeLanguage(langSelect.value)">
-            <option [selected]="currentLanguage == 'vi'" value="vi" style="background-image:url(assets/images/icon/vn.png);">
+          <select class="ml-2 form-control form-control-sm col-6" #langSelect
+            (change)="onChangeLanguage(langSelect.value)">
+            <option [selected]="currentLanguage == 'vi'" value="vi"
+              style="background-image:url(assets/images/icon/vn.png);">
               <span>{{'footer.language.vn.name' | translate}}</span>
             </option>
             <option [selected]="currentLanguage == 'en'" value="en">
@@ -30,12 +32,24 @@
       <div class="col-12 col-md-8 col-lg-5 mt-sm-3">
         <h6 class="text-uppercase text-book font-weight-bold mb-4">{{'const.book' | translate}}</h6>
         <ul class="list-footer mb-0">
-          <li class="mb-2">{{'footer.branch1.title' | translate}} {{'footer.branch1.description' |
-            translate}}{{'footer.branch1.contact' | translate}}</li>
-          <li class="mb-2">{{'footer.branch2.title' | translate}} {{'footer.branch2.description' |
-            translate}}{{'footer.branch2.contact' | translate}}</li>
-          <li class="mb-2">{{'footer.branch3.title' | translate}} {{'footer.branch3.description' |
-            translate}}{{'footer.branch3.contact' | translate}}</li>
+          <li class="mb-2">
+            {{'footer.branch1.title' | translate}} {{'footer.branch1.description' | translate}}
+            <a class="text-white" href="tel:{{'footer.branch1.contact' | translate}}">
+              {{'footer.branch1.contact' | translate}}
+            </a>
+          </li>
+          <li class="mb-2">
+            {{'footer.branch2.title' | translate}} {{'footer.branch2.description' | translate}}
+            <a class="text-white" href="tel:{{'footer.branch2.contact' | translate}}">
+              {{'footer.branch2.contact' | translate}}
+            </a>
+          </li>
+          <li class="mb-2">
+            {{'footer.branch3.title' | translate}} {{'footer.branch3.description' | translate}}
+            <a class="text-white" href="tel:{{'footer.branch3.contact' | translate}}">
+              {{'footer.branch3.contact' | translate}}
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -45,7 +59,9 @@
         <p class="text-white text-small text-center mb-0 py-3 ">
           &copy;2021 All rights reserved.
           <span class="align-baseline">
-            {{ 'const.developer' | translate }} tnvinh99@gmail.com.</span>
+            {{ 'const.developer' | translate }}
+            <a class="text-white" href="mailto:tnvinh99@gmail.com">tnvinh99@gmail.com</a>
+          </span>
         </p>
       </div>
     </div>
@@ -55,11 +71,11 @@
 
 <!-- Phone -->
 <div class="quick-alo-phone quick-alo-green quick-alo-show" id="quick-alo-phoneIcon">
-  <div>
+  <a href="tel:0987333117">
     <div class="quick-alo-ph-circle"></div>
     <div class="quick-alo-ph-circle-fill"></div>
     <div class="quick-alo-ph-img-circle" matTooltip="{{'menupage.tooltip' | translate}}">
       <mat-icon>phone_enabled</mat-icon>
     </div>
-  </div>
+  </a>
 </div>

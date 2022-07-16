@@ -71,7 +71,7 @@ export function createTranslateLoader(http: HttpClient) {
     NgxSkeletonLoaderModule,
     [SweetAlert2Module.forRoot()],
     TranslateModule.forRoot({
-      defaultLanguage: 'vn',
+      defaultLanguage: 'vi',
       loader: {
         provide: TranslateLoader,
         useFactory: (createTranslateLoader),
