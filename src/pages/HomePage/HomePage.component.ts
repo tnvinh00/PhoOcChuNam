@@ -109,9 +109,7 @@ export class HomePageComponent implements OnInit {
   branch = [];
 
   ngOnInit() {
-    this.translate.get('tileWebsite.home').subscribe((res: string) => {
-      this.titleService.setTitle(res);
-    });
+    this.titleService.setTitle(this.translate.instant('tileWebsite.home'));
 
     window.scrollTo(0, 0);
 

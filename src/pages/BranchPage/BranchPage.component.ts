@@ -68,7 +68,6 @@ export class BranchPageComponent implements OnInit {
           this.router.navigate(['/404'])
         }
         this.branch = result[0];
-        console.log(this.branch);
       });
     }, 1000);
   }
