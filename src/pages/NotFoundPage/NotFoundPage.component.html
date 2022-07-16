@@ -1,3 +1,12 @@
-<p>
-  NotFoundPage works!
-</p>
+<div class="container text-center section-notfound">
+  <div class="pt-5">
+    <img class="image-404" src="assets/images/svg/404.svg" alt="404" />
+  </div>
+  <div class="pt-5 notfound-content">
+    <h3 class="notfound-title mb-3">{{'notfound.title' | translate}}</h3>
+    <p class="notfound-description mb-2">{{'notfound.description1' | translate}}</p>
+    <p class="notfound-description">{{'notfound.description2' | translate}}</p>
+    <app-round-button [text]="'notfound.action' | translate" class="mr-2" [icon]="'home'" (click)="gotoHome()">
+    </app-round-button>
+  </div>
+</div>

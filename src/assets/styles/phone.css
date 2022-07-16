@@ -5,7 +5,7 @@
 .quick-alo-phone:hover {
   opacity: 1;
 }
-.quick-alo-ph-img-circle i.fa.fa-phone {
+.quick-alo-ph-img-circle mat-icon {
   position: absolute;
   left: 27%;
   top: 30%;
@@ -392,7 +392,7 @@
     left: -45px;
   }
 
-  .quick-alo-ph-img-circle i.fa.fa-phone {
+  .quick-alo-ph-img-circle mat-icon {
     font-size: 16px;
   }
 

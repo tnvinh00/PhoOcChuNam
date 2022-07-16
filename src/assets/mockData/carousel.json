@@ -1,0 +1,30 @@
+[
+  {
+    "createdAt": "2021-12-12T02:00:22.587Z",
+    "image": "https://res.cloudinary.com/tnvinh00/image/upload/v1640835286/PhoOcChuNam/Banner0_i4jmc9.png",
+    "title": "title 1",
+    "subtitle": "Mừng khai trương chi nhánh 3",
+    "id": "1"
+  },
+  {
+    "createdAt": "2021-12-12T02:00:22.587Z",
+    "image": "https://res.cloudinary.com/tnvinh00/image/upload/v1640281020/PhoOcChuNam/Carousel/banner1-min_rvehvl.jpg",
+    "title": "title 1",
+    "subtitle": "Hệ thống 3 nhà hàng, hương vị và thương hiệu độc quyền",
+    "id": "1"
+  },
+  {
+    "createdAt": "2021-12-11T20:47:17.152Z",
+    "image": "https://res.cloudinary.com/tnvinh00/image/upload/v1640281022/PhoOcChuNam/Carousel/banner2-min_oajvaw.jpg",
+    "title": "title 2",
+    "subtitle": "Hải sản tươi sống, món ăn đa dạng, thực đơn phong phú",
+    "id": "2"
+  },
+  {
+    "createdAt": "2021-12-11T19:04:30.132Z",
+    "image": "https://res.cloudinary.com/tnvinh00/image/upload/v1640281023/PhoOcChuNam/Carousel/banner3-min_itvsfd.jpg",
+    "title": "title 3",
+    "subtitle": "Phục vụ tiệc: sinh nhật, liên hoan, hội họp, tất niên ...",
+    "id": "3"
+  }
+]

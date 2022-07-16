@@ -1,4 +1,6 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { FoodService } from 'services/food.service';
 
@@ -14,25 +16,32 @@ export class TopCarouselComponent implements OnInit {
     autoplay: true,
     autoWidth: true,
     autoplayTimeout: 3000,
-    navText: [ '<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>' ],
+    navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
     center: true,
     items: 1,
     nav: false,
   }
   carousel = [];
 
-  constructor(private foodService: FoodService) { }
+  constructor(
+    private foodService: FoodService,
+    private router: Router,
+    private scroller: ViewportScroller
+  ) { }
 
   ngOnInit() {
     this.foodService.getCarousel().subscribe(data => {
-      this.carousel = data;
+      setTimeout(() => {
+        this.carousel = data;
+      }, 2000);
     });
   }
-  onClickBook() {
-    console.log("Book");
+  onOpenMenu() {
+    this.router.navigate(['/menu'])
   }
 
-  onClickContact() {
-    console.log("Contact");
+  onOpenBranch() {
+    this.router.navigate(['/chi-nhanh'])
+    // this.scroller.scrollToAnchor('lien-he');
   }
 }

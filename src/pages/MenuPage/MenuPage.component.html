@@ -1,3 +1,122 @@
-<p>
-  MenuPage works!
-</p>
+<div class="container">
+  <div class="top-section text-center" id="top-section">
+    <img src="assets/images/menu.png" alt="menu" class="menu-image">
+    <p class="menu-title py-3" id="top-section-text">{{ 'const.menu' | translate }}</p>
+  </div>
+
+  <div class="row justify-content-center" id="section-search">
+    <div class="col-12 col-md-8">
+      <mat-form-field appearance="outline">
+        <mat-label>{{'menupage.search.label' | translate}}</mat-label>
+        <input matInput placeholder="{{'menupage.search.placeholder' | translate}}" [(ngModel)]="searchString"
+          autocomplete="off" (ngModelChange)="searchFood($event)">
+        <button mat-button *ngIf="searchString" matSuffix mat-icon-button aria-label="Clear"
+          (click)="searchString=''; searchFood('')">
+          <mat-icon>close</mat-icon>
+        </button>
+        <mat-hint>{{'menupage.search.hint' | translate}}</mat-hint>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="main-section mt-4" id="main-menu">
+    <div class="row d-flex justify-content-between align-center pt-3">
+      <div class="col-12 col-md-6">
+        <h5 class="text-left text-category text-uppercase">{{'const.category' | translate}}</h5>
+      </div>
+      <div class="col-12 col-md-6 text-right">
+        <span class="text-result">{{'const.result' | translate:paramTranslate }}</span> -
+        <span class="text-result text-main">{{'const.special_short' | translate}}</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-12 col-lg-3 mb-2">
+        <div class="section-left h-100 pb-2">
+          <div class="px-4 row pt-1 d-flex justify-content-center">
+            <ng-template [ngIf]="categories.length > 0" [ngIfElse]="loading2">
+              <div class="col-lg-12 col-sm-3 mb-2 px-1" *ngFor="let item of categories">
+                <app-button-toggle [label]="item.title" [isActive]="currentCategory == item.id"
+                  (click)="onSelectCategory(item.id)"></app-button-toggle>
+              </div>
+            </ng-template>
+            <ng-template #loading2>
+              <div class="col-lg-12 col-sm-3 mb-2 px-1" *ngFor="let item of [1,2,3]">
+                <ngx-skeleton-loader count="2"
+                  [theme]="{ 'border-radius': '10px', 'margin-bottom': '5px', height: '44px'}" appearance="line">
+                </ngx-skeleton-loader>
+              </div>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-12 col-lg-9 section-right">
+        <div class="row">
+          <ng-template [ngIf]="listFoods.length > 0" [ngIfElse]="loading">
+            <div class="col-6 col-md-4 col-lg-3 p-0" *ngFor="let item of foods">
+              <div class="card card-food m-1" title="{{'menupage.tooltip' | translate}}">
+                <div class="card-body">
+                  <div class="card-food-overlay d-flex justify-content-between position-absolute w-100"
+                    *ngIf="item.note">
+                    <div class="bg-main d-flex align-items-center px-3 py-0">*</div>
+                  </div>
+                  <div class="card-image-block w-auto overflow-hidden">
+                    <img class="card-image" loading="lazy" [src]="item.image"
+                      onerror="this.onerror=null;this.src='https://res.cloudinary.com/tnvinh00/image/upload/v1639812672/PhoOcChuNam/image-temp_vcczhz.png'"
+                      alt="Image Food">
+                  </div>
+                  <div class="card-content px-2">
+                    <p class="card-title-text text-food px-1">{{item.title}}</p>
+                  </div>
+                  <hr class="card-divider" />
+                  <div class="card-price-text">
+                    <span>{{'const.price' | translate}}</span>
+                    <span class="card-price-text-call">{{'const.contact' | translate}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <p class="text-right"><i>*{{'const.image' | translate}}</i></p>
+            </div>
+          </ng-template>
+          <ng-template #loading>
+            <div class="col-6 col-md-4 col-lg-3 p-0" *ngFor="let item of [1,2,3,4,5,6]">
+              <div class="card card-food m-1">
+                <div class="card-body">
+                  <ngx-skeleton-loader count="1"
+                    [theme]="{ 'border-radius': '10px 10px 0 0', 'margin-bottom': '25px', height: '150px'}"
+                    appearance="line">
+                  </ngx-skeleton-loader>
+                  <div class="px-5">
+                    <ngx-skeleton-loader count="1" appearance="line" [theme]="{ 'margin-bottom': '20px'}">
+                    </ngx-skeleton-loader>
+                    <hr class="card-divider" />
+                    <ngx-skeleton-loader count="1" appearance="line">
+                    </ngx-skeleton-loader>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template [ngIf]="foods.length == 0">
+            <ng-template [ngIf]="!isloading" [ngIfElse]="loadingtext">
+              <div class="col-12">
+                <p class="text-noresult">{{'const.noresult' | translate:paramTranslate}}</p>
+              </div>
+            </ng-template>
+            <ng-template #loadingtext>
+              <div class="col-12">
+                <p class="text-noresult">{{'const.loading' | translate}}</p>
+              </div>
+            </ng-template>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<app-block-contact></app-block-contact>

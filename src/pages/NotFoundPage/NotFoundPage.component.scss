@@ -1,0 +1,23 @@
+@import '/src/styles/scss/variables.scss';
+@import '/src/styles/scss/mixins.scss';
+
+.section-notfound {
+  text-align: center;
+
+  .image-404 {
+    height: 200px;
+
+    @include breakpoint('max', '640px') {
+      height: 150px;
+    }
+  }
+
+  .notfound-content {
+    max-width: 400px;
+    margin: 0 auto;
+
+    .notfound-title {
+      text-transform: uppercase;
+    }
+  }
+}

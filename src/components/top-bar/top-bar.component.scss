@@ -63,6 +63,11 @@
   @include breakpoint('max', '960px') {
     font-size: 1rem;
   }
+
+  @include breakpoint('max', '768px') {
+    width: 100%;
+    height: 50px;
+  }
 }
 
 
@@ -82,7 +87,7 @@
   padding-bottom: 0 !important;
 }
 
-@media (hover: hover) {
+@media (hover: hover), (active: active) {
   .menu-item-link {
     position: relative;
     transition: all 0.2s linear;
@@ -98,43 +103,42 @@
     width: 0;
     height: 4px;
     background-color: #f53838;
-    transition: all 0.2s linear;
+    transition: all 0.1s linear;
   }
 
-  .menu-item-link:hover {
+  .menu-item-link:hover, .menu-item-link.active {
     color: #f53838;
   }
 
-  .menu-item-link:hover:after {
+  .menu-item-link:hover:after, .menu-item-link.active:after {
     width: 100%;
     left: 0;
     right: auto;
   }
 }
 
-@media screen and (min-width: 768px) {
-  .menu-item--auth {
-    display: none;
-  }
-}
-
 @media screen and (max-width: 767px) {
   .menu {
     position: fixed;
-    right: 0;
     top: 0;
     bottom: 0;
     background-color: white;
-    width: 300px;
+    width: 100%;
     z-index: 99;
     border-left: 1px solid #ddd;
     flex-direction: column;
     gap: 10px 0;
-    padding-top: 60px;
     align-items: stretch;
     transform: translateX(100%);
     will-change: transform;
-    transition: all 0.2s linear;
+    transition: all 0.1s linear;
+    box-shadow: 0 10px 25px rgb(0 0 0 / 15%);
+  }
+
+  .menu.show{
+    right: 100%;
+    top: 64px;
+    height: 300px;
   }
 
   .menu.is-show {
@@ -143,13 +147,12 @@
 
   .header-logo {
     img {
-      height: 40px;
+      height: 42px;
     }
   }
 
   .menu-item-link {
     display: block;
-    width: 100%;
     padding: 20px;
   }
 

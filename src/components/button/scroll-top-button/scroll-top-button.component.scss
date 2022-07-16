@@ -1,10 +1,30 @@
+@import "../../../styles/scss/variables";
+@import "../../../styles/scss/mixins";
+
 .scroll-to-top {
   position: fixed;
   bottom: 90px;
-  right: 15px;
+  right: 24px;
   opacity: 0;
   z-index: 999;
   transition: all 0.2s ease-in-out;
+
+
+  mat-icon {
+    animation: updown 1.5s linear infinite;
+    -webkit-animation: updown 1.5s linear infinite;
+  }
+
+  @include breakpoint('max', '768px') {
+    button {
+      width: 50px;
+      height: 50px;
+    }
+
+    mat-icon {
+      font-size: 1.25rem;
+    }
+  }
 }
 
 .show-scrollTop {
@@ -20,6 +40,7 @@
     -ms-transform: translateY(-1px);
     -o-transform: translateY(-1px);
   }
+
   20% {
     transform: translateY(1px);
     -webkit-transform: translateY(1px);
@@ -27,6 +48,7 @@
     -ms-transform: translateY(1px);
     -o-transform: translateY(1px);
   }
+
   40% {
     transform: translateY(-1px);
     -webkit-transform: translateY(-1px);
@@ -34,6 +56,7 @@
     -ms-transform: translateY(-1px);
     -o-transform: translateY(-1px);
   }
+
   60%,
   100% {
     transform: translateY(1px);
@@ -42,9 +65,4 @@
     -ms-transform: translateY(1px);
     -o-transform: translateY(1px);
   }
-}
-
-mat-icon {
-  animation: updown 1.5s linear infinite;
-  -webkit-animation: updown 1.5s linear infinite;
 }

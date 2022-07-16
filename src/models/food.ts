@@ -1,15 +1,15 @@
 export class Food {
   id: string;
-  imgSource: string;
-  name: string;
-  nameENG: string;
-  nameCHI: string;
+  image: string;
+  title: string;
   desc: string;
   price: number;
+  // status view or hide food
   status: string;
-  rate: number;
-  deleted: boolean;
+  rate: string;
   note: string;
+  // is trend = 1 will show on home page
+  trend: string;
+  categoryId: string;
   createdAt: string;
-  updatedAt: string;
 }

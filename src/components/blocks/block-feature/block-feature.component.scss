@@ -1,0 +1,53 @@
+@import '/src/styles/scss/variables.scss';
+@import '/src/styles/scss/mixins.scss';
+
+.block-feature {
+  // background-color: $color-main-light;
+  background: linear-gradient(rgba(248, 250, 253, 0) 0%, $color-main-light 250px);
+
+  .image-feature {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+
+    @include breakpoint('max', '768px') {
+      height: 90px;
+      width: 90px;
+    }
+  }
+
+
+  .feature-card {
+    .text-feature-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+
+      @include breakpoint('max', '768px') {
+        font-size: 1.1rem;
+      }
+    }
+
+    .text-feature-description {
+      font-size: 1.05rem;
+      animation-delay: 0.5s;
+
+      @include breakpoint('max', '768px') {
+        font-size: 0.95rem;
+      }
+    }
+
+    border-radius: 10px;
+
+    &:hover {
+      background-color: $color-main-2;
+      box-shadow: 0 10px 25px rgba(241, 196, 196, 0.25);
+      transform: translateY(-3px);
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}
+
+.elementor-shape-fill {
+  fill: $color-main-light;
+}

@@ -1,0 +1,28 @@
+@import '/src/styles/scss/variables.scss';
+@import '/src/styles/scss/mixins.scss';
+
+.block-contact{
+  // background-color: $color-main-light;
+  background: linear-gradient(rgba(248, 250, 253, 0) 0%, #fcebe5 813px);;
+}
+
+.section-header {
+  margin: 60px 0 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: $font-size-h3-desktop;
+  font-weight: 700;
+
+  @include breakpoint('max', '960px') {
+    font-size: 1.5rem;
+  }
+}
+
+.section-subtile {
+  color: $color-gray-2;
+  text-align: center;
+}
+
+.elementor-shape-fill {
+  fill: $color-main-light;
+}
