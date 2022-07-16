@@ -1,7 +1,5 @@
 import { ViewportScroller } from '@angular/common';
-import { Component, OnInit, HostListener } from '@angular/core';
-import { Title } from '@angular/platform-browser';
-import { TranslateService } from '@ngx-translate/core';
+import { Component, OnInit } from '@angular/core';
 import { FoodService } from 'services/food.service';
 import StringUtils from 'utils/string';
 
@@ -28,16 +26,10 @@ export class MenuPageComponent implements OnInit {
 
   constructor(
     private foodService: FoodService,
-    private titleService: Title,
-    private translate: TranslateService,
     private scroller: ViewportScroller
   ) { }
 
   ngOnInit() {
-    this.translate.get('tileWebsite.menu').subscribe((res: string) => {
-      this.titleService.setTitle(res);
-    });
-
     window.scrollTo(0, 0);
 
     this.foodService.getFood().subscribe(data => {

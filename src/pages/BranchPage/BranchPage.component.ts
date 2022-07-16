@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { Branch } from 'models/branch';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { FoodService } from 'services/food.service';
-import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-BranchPage',
@@ -15,7 +15,7 @@ export class BranchPageComponent implements OnInit {
   activeTab = 'pho-oc-chu-nam-1';
   slug: string;
   listBranch = []
-  branch = null;
+  branch: Branch = null;
 
   customOptions: OwlOptions = {
     loop: true,
@@ -35,13 +35,11 @@ export class BranchPageComponent implements OnInit {
     private titleService: Title,
     private translate: TranslateService,
     private foodService: FoodService,
-    private router: Router
+    private router: Router,
+    private meta: Meta
   ) { }
 
   ngOnInit() {
-    this.translate.get('tileWebsite.branch').subscribe((res: string) => {
-      this.titleService.setTitle(res);
-    });
 
     window.scrollTo(0, 0);
 
@@ -68,6 +66,8 @@ export class BranchPageComponent implements OnInit {
           this.router.navigate(['/404'])
         }
         this.branch = result[0];
+        this.titleService.setTitle(this.branch.name + this.translate.instant('titleWebsite.suffix'));
+        this.meta.updateTag({ name: 'description', content: this.branch.address });
       });
     }, 1000);
   }
@@ -82,6 +82,8 @@ export class BranchPageComponent implements OnInit {
         this.router.navigate(['/404'])
       }
       this.branch = result[0];
+      this.titleService.setTitle(this.branch.name + this.translate.instant('titleWebsite.suffix'));
+      this.meta.updateTag({ name: 'description', content: this.branch.address });
     }, 1000);
   }
 }

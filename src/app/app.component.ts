@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { MAT_TOOLTIP_DEFAULT_OPTIONS, MatTooltipDefaultOptions } from '@angular/material/tooltip';
+import { Title } from '@angular/platform-browser';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { filter, map } from 'rxjs/operators';
 
 export const myCustomTooltipDefaults: MatTooltipDefaultOptions = {
   showDelay: 100,
@@ -18,10 +21,11 @@ export const myCustomTooltipDefaults: MatTooltipDefaultOptions = {
   ],
 })
 export class AppComponent {
-  title = 'phooc';
 
   constructor(
     private translate: TranslateService,
+    private title: Title,
+    private router: Router,
   ) {
     translate.addLangs(['vi', 'en']);
     translate.setDefaultLang('vi');
@@ -40,7 +44,36 @@ export class AppComponent {
     }
   }
 
-  OnInit() {
+  ngOnInit() {
     window.scrollTo(0, 0);
+    this.setupTitleListener();
+  }
+
+  
+  private setupTitleListener() {
+    this.router.events
+      .pipe(
+        filter((event) => event instanceof NavigationEnd),
+        map(() => {
+          let route: ActivatedRoute = this.router.routerState.root;
+          let key: string;
+          while (route!.firstChild) {
+            route = route.firstChild;
+          }
+          if (route?.snapshot?.data) {
+            key = route?.snapshot?.data['key'];
+          }
+
+          return key;
+        })
+      )
+      .subscribe((key: any) => {
+        if (key) {
+          // Get title page when router changes
+          this.translate.get(`titleWebsite.${key}`).subscribe((title) =>
+            this.title.setTitle(title)
+          );
+        }
+      });
   }
 }
