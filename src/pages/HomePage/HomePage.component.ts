@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
-import { TranslateService } from '@ngx-translate/core';
 import { Food } from 'models/food';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { FoodService } from 'services/food.service';
@@ -14,8 +12,6 @@ import Swal from 'sweetalert2';
 export class HomePageComponent implements OnInit {
   constructor(
     private foodService: FoodService,
-    private titleService: Title,
-    private translate: TranslateService
   ) { }
 
   customOptions: OwlOptions = {
@@ -109,10 +105,6 @@ export class HomePageComponent implements OnInit {
   branch = [];
 
   ngOnInit() {
-    this.translate.get('tileWebsite.home').subscribe((res: string) => {
-      this.titleService.setTitle(res);
-    });
-
     window.scrollTo(0, 0);
 
     this.foodService.getFood().subscribe((data: Food[]) => {

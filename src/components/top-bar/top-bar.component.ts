@@ -49,8 +49,8 @@ export class TopBarComponent implements OnInit {
     this.icon = 'menu';
   }
 
-  onClick(event){
-    if (!this._eref.nativeElement.contains(event.target)){
+  onClick(event) {
+    if (!this._eref.nativeElement.contains(event.target)) {
       this.isshow = false;
       this.icon = 'menu';
     }

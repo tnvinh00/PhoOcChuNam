@@ -33,9 +33,10 @@ export class TopCarouselComponent implements OnInit {
     this.foodService.getCarousel().subscribe(data => {
       setTimeout(() => {
         this.carousel = data;
-      }, 2000);
+      }, 0);
     });
   }
+
   onOpenMenu() {
     this.router.navigate(['/menu'])
   }

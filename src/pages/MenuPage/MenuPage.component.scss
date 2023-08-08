@@ -79,6 +79,7 @@ mat-form-field {
 
       .card-food-overlay {
         z-index: 11;
+
         div {
           border-top-left-radius: 10px;
           border-bottom-right-radius: 10px;
@@ -148,10 +149,19 @@ mat-form-field {
 .card-food:hover {
   box-shadow: 0 5px 20px rgb(0 0 0 / 20%);
   transform: translateY(-3px);
-  transition: all 0.2s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
 
   .card-image {
     transform: scale(1.05);
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
   }
 }
 
