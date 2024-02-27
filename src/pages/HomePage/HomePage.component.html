@@ -3,6 +3,9 @@
 
 <app-block-feature></app-block-feature>
 
+<p class="section-header">{{ 'homeheader.latest_posts' | translate }}</p>
+<app-fb-posts></app-fb-posts>
+
 <!-- Section seafood -->
 <p class="section-header">{{ 'homeheader.seafood' | translate }}</p>
 <ng-template [ngIf]="category.length > 0" [ngIfElse]="loading">
