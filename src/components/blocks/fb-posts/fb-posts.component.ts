@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 import { FacebookService } from 'services/facebook.service';
 
 @Component({
@@ -8,6 +9,27 @@ import { FacebookService } from 'services/facebook.service';
 })
 export class FbPostsComponent implements OnInit {
   posts = [];
+
+  customOptions: OwlOptions = {
+    dots: false,
+    center: false,
+    navText: [
+      '<i class="fa fa-angle-left h4" aria-hidden="true"></i>',
+      '<i class="fa fa-angle-right h4" aria-hidden="true"></i>',
+    ],
+    responsive: {
+      0: {
+        items: 1,
+      },
+      768: {
+        items: 2,
+      },
+      1440: {
+        items: 3,
+      },
+    },
+    nav: true,
+  };
   constructor(private facebookService: FacebookService) {}
 
   ngOnInit() {
