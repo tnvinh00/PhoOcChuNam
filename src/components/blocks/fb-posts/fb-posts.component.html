@@ -1,0 +1,14 @@
+<div class="container mt-5">
+  <owl-carousel-o [options]="customOptions">
+    <ng-template carouselSlide *ngFor="let item of posts">
+      <div class="animated animatedFadeInUp fadeInUp px-3">
+        <div
+          class="fb-post w-100"
+          data-width="auto"
+          data-show-text="true"
+          [attr.data-href]="item"
+        ></div>
+      </div>
+    </ng-template>
+  </owl-carousel-o>
+</div>

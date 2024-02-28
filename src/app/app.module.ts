@@ -35,6 +35,7 @@ import { BlockContactComponent } from 'components/blocks/block-contact/block-con
 import { ScrollTopButtonComponent } from 'components/button/scroll-top-button/scroll-top-button.component';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { SafePipe } from 'pipes/safe.pipe';
+import { FbPostsComponent } from 'components/blocks/fb-posts/fb-posts.component';
 
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: HttpClient) {
@@ -58,7 +59,8 @@ export function createTranslateLoader(http: HttpClient) {
     BranchCardComponent,
     ButtonToggleComponent,
     BlockFeatureComponent,
-    BlockContactComponent
+    BlockContactComponent,
+    FbPostsComponent
   ],
   imports: [
     BrowserModule,
