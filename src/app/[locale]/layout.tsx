@@ -1,28 +1,8 @@
 import type { Metadata } from 'next';
-import '@/styles/globals.scss';
-import { Inter } from 'next/font/google';
 import { notFound } from 'next/navigation';
-import { LocalesType, routing } from '@/i18n/routing';
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, setRequestLocale } from 'next-intl/server';
-
-// import localFont from 'next/font/local';
-
-// const geistSans = localFont({
-//   src: './fonts/GeistVF.woff',
-//   variable: '--font-geist-sans',
-//   weight: '100 900',
-// });
-// const geistMono = localFont({
-//   src: './fonts/GeistMonoVF.woff',
-//   variable: '--font-geist-mono',
-//   weight: '100 900',
-// });
-
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap'
-});
+import { type Locale, routing } from '@/i18n/routing';
+import { setRequestLocale } from 'next-intl/server';
+import BaseLayout from '@/components/layouts/BaseLayout';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -34,35 +14,23 @@ export default async function LocaleLayout({
   params: { locale }
 }: Readonly<{
   children: React.ReactNode;
-  params: { locale: string };
+  params: { locale: Locale };
 }>) {
   // Ensure that the incoming `locale` is valid
-  if (!routing.locales.includes(locale as LocalesType)) {
+  if (!routing.locales.includes(locale as Locale)) {
     notFound();
   }
 
   // Enable static rendering
   setRequestLocale(locale);
 
-  // Providing all messages to the client
-  // side is the easiest way to get started
-  const messages = await getMessages();
-
-  return (
-    <html lang="en">
-      <body className={inter.className}>
-        <NextIntlClientProvider messages={messages}>
-          {children}
-        </NextIntlClientProvider>
-      </body>
-    </html>
-  );
+  return <BaseLayout locale={locale}>{children}</BaseLayout>;
 }
 
 export function generateStaticParams({
   params: { locale }
 }: {
-  params: { locale: LocalesType };
+  params: { locale: Locale };
 }) {
   return routing.locales.map(locale => ({ locale }));
 }
