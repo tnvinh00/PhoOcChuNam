@@ -40,7 +40,7 @@ export default async function BaseLayout({
       <head>
         <ThemeModeScript />
       </head>
-      <body className={cn('', inter.className)}>
+      <body className={cn('min-h-screen', inter.className)}>
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>

@@ -7,3 +7,117 @@ datasource db {
   url       = env("DATABASE_URL")
   directUrl = env("DIRECT_URL")
 }
+
+enum Role {
+  super_admin
+  admin
+  user
+}
+
+model User {
+  id          Int     @id @default(autoincrement())
+  email       String  @unique
+  name        String?
+  description String?
+  title       String?
+  posts       Post[]
+  role        Role    @default(user)
+}
+
+enum Status {
+  draft
+  published
+  archived
+}
+
+model Post {
+  id          Int       @id @default(autoincrement())
+  title       String
+  description String
+  content     String?
+  slug        String    @unique
+  thumbnail   String?
+  category    Category? @relation(fields: [categoryId], references: [id])
+  categoryId  Int?
+  published   Boolean   @default(false)
+  author      User?     @relation(fields: [authorId], references: [id])
+  authorId    Int?
+  views       Int       @default(0)
+  tags        Tag[]
+  branches    Branch[]
+  status      Status    @default(draft)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Tag {
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  Post      Post[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Category {
+  id        Int        @id @default(autoincrement())
+  name      String
+  slug      String     @unique
+  posts     Post[]
+  color     Color?     @relation(fields: [colorId], references: [id])
+  colorId   Int?
+  parent    Category?  @relation("CategoryToParent", fields: [parentId], references: [id])
+  parentId  Int?
+  children  Category[] @relation("CategoryToParent")
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+}
+
+model Color {
+  id        Int        @id @default(autoincrement())
+  name      String
+  slug      String     @unique
+  hex       String     @default("#000000")
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+  Category  Category[]
+}
+
+model SiteSetting {
+  id        Int      @id @default(autoincrement())
+  key       String   @unique
+  value     String
+  disabled  Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Branch {
+  id          Int      @id @default(autoincrement())
+  name        String
+  description String
+  address     String
+  slug        String
+  tax         String
+  Post        Post[]
+  postId      Int?
+  direction   String
+  emails      String[]
+  phones      String[]
+  facebook    String
+  images      String[]
+  Food        Food?    @relation(fields: [foodId], references: [id])
+  foodId      Int?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Food {
+  id          Int      @id @default(autoincrement())
+  name        String
+  description String?
+  image       String?
+  branches    Branch[]
+  price       Float?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}

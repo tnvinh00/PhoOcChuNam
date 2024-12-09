@@ -5,7 +5,7 @@ export async function updateSession(
   request: NextRequest,
   response: NextResponse
 ) {
-  createServerClient(
+  const supabase = createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
     {
@@ -24,6 +24,8 @@ export async function updateSession(
       }
     }
   );
+
+  await supabase.auth.getUser();
 
   // IMPORTANT: You *must* return the supabaseResponse object as it is. If you're
   // creating a new response object with NextResponse.next() make sure to:

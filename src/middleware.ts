@@ -9,10 +9,15 @@ export async function middleware(request: NextRequest) {
   const path = request.nextUrl.pathname;
   let response = NextResponse.next({ request });
 
-  // ignore for admin, login
-  if (['/admin', '/login'].every(p => !path.startsWith(p))) {
+  // ignore i18n routing on these paths
+  const ignorePaths = ['/admin', '/login'];
+
+  if (ignorePaths.every(p => !path.startsWith(p))) {
     response = handleI18nRouting(request);
   }
+
+  const nonce = Buffer.from(crypto.randomUUID()).toString('base64');
+  response.headers.set('x-nonce', nonce);
 
   return await updateSession(request, response);
 }

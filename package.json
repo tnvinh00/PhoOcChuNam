@@ -7,14 +7,19 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky"
+    "prepare": "husky",
+    "prisma": "npx prisma migrate dev --name init",
+    "supabase:typescript": "SUPABASE_PROJECT_ID=gwvweavczoeoytywqkqq npx supabase gen types typescript --project-id \"$SUPABASE_PROJECT_ID\" --schema public > src/types/database.types.ts"
   },
   "dependencies": {
     "@prisma/client": "^6.0.1",
     "@supabase/ssr": "^0.5.2",
     "@supabase/supabase-js": "^2.46.2",
+    "aos": "^2.3.4",
     "clsx": "^2.1.1",
     "flowbite-react": "^0.10.2",
+    "gsap": "^3.12.5",
+    "lenis": "^1.1.18",
     "next": "14.2.20",
     "next-intl": "^3.25.3",
     "react": "^18",
@@ -29,6 +34,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "dotenv-cli": "^7.4.4",
     "eslint": "^8",
     "eslint-config-next": "14.2.20",
     "eslint-config-prettier": "^9.1.0",

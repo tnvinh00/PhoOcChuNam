@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { type Locale, routing } from '@/i18n/routing';
 import { setRequestLocale } from 'next-intl/server';
-import BaseLayout from '@/components/layouts/BaseLayout';
+import BaseLayout from '@/components/layout/BaseLayout';
 
 export const metadata: Metadata = {
   title: 'Create Next App',

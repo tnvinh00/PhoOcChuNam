@@ -1,4 +1,4 @@
-import BaseLayout from '@/components/layouts/BaseLayout';
+import BaseLayout from '@/components/layout/BaseLayout';
 import { type Locale } from '@/i18n/routing';
 import React from 'react';
 
