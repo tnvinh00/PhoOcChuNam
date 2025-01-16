@@ -16,6 +16,10 @@
       [active]="activeTab == 'ham-ruou-pho-oc-chu-nam-3'">
       {{'branch.3' | translate | uppercase}}
     </a>
+    <a mat-tab-link routerLink='/chi-nhanh/ham-ruou-pho-oc-chu-nam-6' (click)="onChangeTab('ham-ruou-pho-oc-chu-nam-6')"
+      [active]="activeTab == 'ham-ruou-pho-oc-chu-nam-6'">
+      {{'branch.6' | translate | uppercase}}
+    </a>
   </nav>
 </div>
 
@@ -33,9 +37,18 @@
           <div class="card-image-block w-auto overflow-hidden">
             <owl-carousel-o [options]="customOptions">
               <ng-template carouselSlide *ngFor="let item of branch.image">
-                <img class="card-branch-image" [src]="item" loading="lazy"
-                  onerror="this.onerror=null;this.src='https://res.cloudinary.com/tnvinh00/image/upload/v1639495889/PhoOcChuNam/QJzMcF1_n42ptl.png'"
-                  alt="Branch image">
+                <ng-container *ngIf="item.endsWith('.mp4') || item.endsWith('.avi') || item.endsWith('.mov') || item.endsWith('.webm'); else image">
+                  <video class="card-branch-image" controls="false" loop autoplay>
+                    <source [src]="item" type="video/mp4">
+                    <source [src]="item" type="video/webm">
+                    Your browser does not support the video tag.
+                  </video>
+                </ng-container>
+                <ng-template #image>
+                  <img class="card-branch-image" [src]="item" loading="lazy"
+                    onerror="this.onerror=null;this.src='https://res.cloudinary.com/tnvinh00/image/upload/v1639495889/PhoOcChuNam/QJzMcF1_n42ptl.png'"
+                    alt="Branch image">
+                </ng-template>
               </ng-template>
             </owl-carousel-o>
           </div>

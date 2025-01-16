@@ -25,7 +25,7 @@ export class BranchPageComponent implements OnInit {
     touchDrag: true,
     pullDrag: false,
     navSpeed: 700,
-    autoplayTimeout: 3000,
+    autoplayTimeout: 5000,
     items: 1,
     nav: false
   }

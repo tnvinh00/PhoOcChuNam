@@ -1,14 +1,14 @@
 {
   "titleWebsite": {
-    "suffix": "- Fresh seafood, exclusive flavors, premium wine cellar - Accept orders for parties, birthdays, parties, year-end... Contact: 0987333117",
-    "home": "Pho Oc Chu Nam Restaurant - Fresh seafood, exclusive flavors, premium wine cellar - Accept orders for parties, birthdays, parties, year-end... Contact: 0987333117",
-    "menu": "Menu - Pho Oc Chu Nam Restaurant - Fresh seafood, exclusive flavors, premium wine cellar - Accept orders for parties, birthdays, parties, year-end... Contact: 0987333117",
-    "branch": "Branches - Pho Oc Chu Nam Restaurant - Fresh seafood, exclusive flavors, premium wine cellar - Accept orders for parties, birthdays, parties, year-end... Contact: 0987333117",
-    "notfound": "Page not found - Pho Oc Chu Nam Restaurant - Fresh seafood, exclusive flavors, premium wine cellar - Accept orders for parties, birthdays, parties, year-end... Contact: 0987333117"
+    "suffix": "- Fresh seafood, exclusive flavors, premium wine cellar - Accept orders for parties, birthdays, parties, year-end... Contact: 0362596790",
+    "home": "Pho Oc Chu Nam Restaurant - Fresh seafood, exclusive flavors, premium wine cellar - Accept orders for parties, birthdays, parties, year-end... Contact: 0362596790",
+    "menu": "Menu - Pho Oc Chu Nam Restaurant - Fresh seafood, exclusive flavors, premium wine cellar - Accept orders for parties, birthdays, parties, year-end... Contact: 0362596790",
+    "branch": "Branches - Pho Oc Chu Nam Restaurant - Fresh seafood, exclusive flavors, premium wine cellar - Accept orders for parties, birthdays, parties, year-end... Contact: 0362596790",
+    "notfound": "Page not found - Pho Oc Chu Nam Restaurant - Fresh seafood, exclusive flavors, premium wine cellar - Accept orders for parties, birthdays, parties, year-end... Contact: 0362596790"
   },
   "caption": "Restaurant system",
   "name": "Pho Oc Chu Nam",
-  "description": "Specializing in serving fresh seafood, parties, weddings, birthdays, year-end parties, festivals... Contact: 0987333117",
+  "description": "Specializing in serving fresh seafood, parties, weddings, birthdays, year-end parties, festivals... Contact: 0362596790",
   "openAt": {
     "text": "Open time: ",
     "time": "9:00 - 23:00"
@@ -21,8 +21,9 @@
   },
   "branch": {
     "1": "Pho Oc Chu Nam 1",
-    "2": "Pho Oc Chu Nam 2",
-    "3": "Wine Cellar Pho Oc Chu Nam 3"
+    "2": "Wine Cellar Pho Oc Chu Nam 2",
+    "3": "Wine Cellar Pho Oc Chu Nam 3",
+    "6": "Wine Cellar Pho Oc Chu Nam 6"
   },
   "features": {
     "1": {
@@ -78,7 +79,7 @@
     "gotoTop": "Go to top",
     "result": "Have {{result}} foods",
     "noresult": "Not found '{{searchString}}'. Please try again.",
-    "developer": "Released by ",
+    "developer": "Develop by ",
     "special": "Only available at branch Wine Cellar Pho Oc Chu Nam 3",
     "special_short": "(* : Only available at BR3)",
     "image": "Pictures may differ from reality!"
@@ -106,11 +107,16 @@
     "branch2": {
       "title": "BR2: ",
       "description": "Khanh Binh, Tan Uyen, Binh Duong - ",
-      "contact": "0974798651"
+      "contact": "0848003122"
     },
     "branch3": {
       "title": "BR3: ",
       "description": "Binh Chuan, Thuan An, Binh Duong - ",
+      "contact": "0975357059"
+    },
+    "branch6": {
+      "title": "BR6: ",
+      "description": "Le Thi Rieng, Binh Chuan, Thuan An, Binh Duong - ",
       "contact": "0362596790"
     },
     "language": {

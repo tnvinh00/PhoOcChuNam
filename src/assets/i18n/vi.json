@@ -1,14 +1,14 @@
 {
   "titleWebsite": {
-    "suffix": " - Hải sản tươi sống, hương vị độc quyền, hầm rượu cao cấp - Nhận đặt tiệc, sinh nhật, liên hoan, tất niên... Liên hệ: 0987333117",
-    "home": "Nhà hàng Phố Ốc Chú Năm - Hải sản tươi sống, hương vị độc quyền, hầm rượu cao cấp - Nhận đặt tiệc, sinh nhật, liên hoan, tất niên... Liên hệ: 0987333117",
-    "menu": "Thực đơn món ăn - Nhà hàng Phố Ốc Chú Năm - Hải sản tươi sống, hương vị độc quyền, hầm rượu cao cấp - Nhận đặt tiệc, sinh nhật, liên hoan, tất niên... Liên hệ: 0987333117",
-    "branch": "Chi nhánh - Nhà hàng Phố Ốc Chú Năm - Hải sản tươi sống, hương vị độc quyền, hầm rượu cao cấp - Nhận đặt tiệc, sinh nhật, liên hoan, tất niên... Liên hệ: 0987333117",
-    "notfound": "Không tìm thấy trang - Nhà hàng Phố Ốc Chú Năm - Hải sản tươi sống, hương vị độc quyền, hầm rượu cao cấp - Nhận đặt tiệc, sinh nhật, liên hoan, tất niên... Liên hệ: 0987333117"
+    "suffix": " - Hải sản tươi sống, hương vị độc quyền, hầm rượu cao cấp - Nhận đặt tiệc, sinh nhật, liên hoan, tất niên... Liên hệ: 0362596790",
+    "home": "Nhà hàng Phố Ốc Chú Năm - Hải sản tươi sống, hương vị độc quyền, hầm rượu cao cấp - Nhận đặt tiệc, sinh nhật, liên hoan, tất niên... Liên hệ: 0362596790",
+    "menu": "Thực đơn món ăn - Nhà hàng Phố Ốc Chú Năm - Hải sản tươi sống, hương vị độc quyền, hầm rượu cao cấp - Nhận đặt tiệc, sinh nhật, liên hoan, tất niên... Liên hệ: 0362596790",
+    "branch": "Chi nhánh - Nhà hàng Phố Ốc Chú Năm - Hải sản tươi sống, hương vị độc quyền, hầm rượu cao cấp - Nhận đặt tiệc, sinh nhật, liên hoan, tất niên... Liên hệ: 0362596790",
+    "notfound": "Không tìm thấy trang - Nhà hàng Phố Ốc Chú Năm - Hải sản tươi sống, hương vị độc quyền, hầm rượu cao cấp - Nhận đặt tiệc, sinh nhật, liên hoan, tất niên... Liên hệ: 0362596790"
   },
   "caption": "Hệ thống nhà hàng",
   "name": "Phố Ốc Chú Năm",
-  "description": "Chuyên phục vụ hải sản tươi sống, tiệc, cưới, sinh nhật, tất niên, liên hoan ... Liên hệ: 0987333117",
+  "description": "Chuyên phục vụ hải sản tươi sống, tiệc, cưới, sinh nhật, tất niên, liên hoan ... Liên hệ: 0362596790",
   "openAt": {
     "text": "Giờ mở cửa: ",
     "time": "9:00 - 23:00"
@@ -21,8 +21,9 @@
   },
   "branch": {
     "1": "Phố Ốc Chú Năm 1",
-    "2": "Phố Ốc Chú Năm 2",
-    "3": "Hầm Rượu Phố Ốc Chú Năm 3"
+    "2": "Hầm Rượu Phố Ốc Chú Năm 2",
+    "3": "Hầm Rượu Phố Ốc Chú Năm 3",
+    "6": "Hầm Rượu Phố Ốc Chú Năm 6"
   },
   "features": {
     "1": {
@@ -78,7 +79,7 @@
     "gotoTop": "Lên đầu trang",
     "result": "Có {{result}} món ăn",
     "noresult": "Không tìm thấy món ăn '{{searchString}}'. Vui lòng thử lại.",
-    "developer": "Released by ",
+    "developer": "Develop by ",
     "special": "Chỉ có tại chi nhánh Hầm rượu Phố Ốc Chú Năm 3",
     "special_short": "(* : Chỉ có tại CN3)",
     "image": "Hình ảnh có thể khác so với thực tế!"
@@ -106,11 +107,16 @@
     "branch2": {
       "title": "CN2: ",
       "description": "Khánh Bình, Tân Uyên, BD - ",
-      "contact": "0974798651"
+      "contact": "0848003122"
     },
     "branch3": {
       "title": "CN3: ",
       "description": "Bình Chuẩn, Thuận An, BD - ",
+      "contact": "0975357059"
+    },
+    "branch6": {
+      "title": "CN6: ",
+      "description": "Lê Thị Riêng, Bình Chuẩn, Thuận An, BD - ",
       "contact": "0362596790"
     },
     "language": {

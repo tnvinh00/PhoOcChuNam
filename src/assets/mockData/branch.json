@@ -13,10 +13,13 @@
     "address": "4 Đường 22 Tháng 12, An Phú, Thuận An, Bình Dương",
     "website": "https://phoocchunam.com/chi-nhanh/pho-oc-chu-nam-1",
     "company": "Công ty TNHH Nhà Hàng Phố Ốc Chú Năm",
-    "mst": "3702 67 95 96",
+    "mst": "3702679596",
     "desc": "desc 1",
     "googlemap": "https://maps.app.goo.gl/M947GgqKKhGHC3AQ8",
-    "phone": ["0949722268", "0987333117"],
+    "phone": [
+      "0949722268",
+      "0362596790"
+    ],
     "email": "",
     "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.2170130494565!2d106.73837711474498!3d10.946973259016039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d9ee90765645%3A0xa8d2a266139fcc91!2zUXXDoW4gUGjhu5Eg4buQYyBDaMO6IE7Eg20!5e0!3m2!1svi!2s!4v1640146266960!5m2!1svi!2s",
     "fanpage": "Phố ốc chú năm",
@@ -40,11 +43,14 @@
     "address": "Đt 747B, Tổ 6, Kp Long Bình, Khánh Bình, Tân Uyên, Bình Dương",
     "website": "https://phoocchunam.com/chi-nhanh/pho-oc-chu-nam-2",
     "company": "Chi nhánh Công ty TNHH Thương mại - Dịch vụ Đại Tùng Phát - Phố Ốc Chú Năm 2",
-    "mst": "3701 434 850 - 001",
+    "mst": "3701434850-001",
     "desc": "desc 2",
     "googlemap": "https://maps.app.goo.gl/9vPoMMa2JL3cv7a46",
     "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15664.103196959048!2d106.7588497!3d11.03669115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4c4eeab553e2b9b2!2zUGjhu5Eg4buQYyBI4bqjaSBT4bqjbiBDaMO6IE7Eg20gMg!5e0!3m2!1svi!2s!4v1640145811003!5m2!1svi!2s",
-    "phone": ["0974798651", "0987333117"],
+    "phone": [
+      "0974798651",
+      "0362596790"
+    ],
     "email": "",
     "fanpage": "Phố Ốc Chú Năm 2",
     "link": "https://www.facebook.com/Nh%C3%A0-H%C3%A0ng-Ch%C3%BA-N%C4%83m-103393705179628",
@@ -63,15 +69,49 @@
     "address": "DT743, KP Bình Phước B, Bình Chuẩn, Thuận An, Bình Dương",
     "website": "https://phoocchunam.com/chi-nhanh/ham-ruou-pho-oc-chu-nam-3",
     "company": "Công ty TNHH Nhà Hàng Phố Ốc Chú Năm",
-    "mst": "3702 67 95 96 - 001",
+    "mst": "3702679596-001",
     "desc": "desc 3",
     "googlemap": "https://maps.app.goo.gl/QECRzrJdPxQJ5sc38",
     "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.805305643989!2d106.73516901474515!3d10.978063458441415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d94d2d7d4e3d%3A0x1abb1dedb6d2efbb!2zSOG6p20gUsaw4bujdSBQaOG7kSDhu5BjIENow7ogTsSDbSAz!5e0!3m2!1svi!2s!4v1640146337483!5m2!1svi!2s",
-    "phone": ["0362596790", "0987333117"],
+    "phone": [
+      "0362596790",
+      "0362596790"
+    ],
     "email": "",
     "fanpage": "Hầm rượu Phố Ốc Chú Năm 3",
-    "link": "https://www.facebook.com/hamruou-phoocchunam3",
+    "link": "https://www.facebook.com/phoocchunam",
     "id": "3",
     "slug": "ham-ruou-pho-oc-chu-nam-3"
+  },
+  {
+    "createdAt": "2024-01-16T09:22:33.592Z",
+    "name": "Hầm Rượu Phố Ốc Chú Năm 6",
+    "image": [
+      "https://res.cloudinary.com/tnvinh00/image/upload/v1736998233/PhoOcChuNam/Branch/6/FB_IMG_1736735515891_ortg2j.jpg",
+      "https://res.cloudinary.com/tnvinh00/video/upload/v1736998809/PhoOcChuNam/Branch/6/lv_0_20250116103308_s68fmt.mp4",
+      "https://res.cloudinary.com/tnvinh00/image/upload/v1736998357/PhoOcChuNam/Branch/6/IMG_948_1736654325091_rybtla.jpg",
+      "https://res.cloudinary.com/tnvinh00/image/upload/v1736998356/PhoOcChuNam/Branch/6/IMG_927_1736682360275_t4f7nx.jpg",
+      "https://res.cloudinary.com/tnvinh00/image/upload/v1736998355/PhoOcChuNam/Branch/6/IMG_861_1736682359764_jzb919.jpg",
+      "https://res.cloudinary.com/tnvinh00/image/upload/v1736998355/PhoOcChuNam/Branch/6/IMG_894_1736682359936_rihddi.jpg",
+      "https://res.cloudinary.com/tnvinh00/image/upload/v1736998355/PhoOcChuNam/Branch/6/IMG_913_1736682360083_bbbifx.jpg",
+      "https://res.cloudinary.com/tnvinh00/image/upload/v1736998355/PhoOcChuNam/Branch/6/IMG_956_1736682360742_au4apb.jpg",
+      "https://res.cloudinary.com/tnvinh00/image/upload/v1736998355/PhoOcChuNam/Branch/6/IMG_939_1736682360477_iobuu4.jpg"
+    ],
+    "address": "219B Đường Lê Thị Trung, KP 1B, An Phú, TP Thuận An, Bình Dương",
+    "website": "https://phoocchunam.com/chi-nhanh/ham-ruou-pho-oc-chu-nam-6",
+    "company": "Công ty TNHH Nhà Hàng Phố Ốc Chú Năm",
+    "mst": "3702679596-002",
+    "desc": "desc 4",
+    "googlemap": "https://maps.app.goo.gl/UsBXyiBJ77ZfwfNy5",
+    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.962701380548!2d106.72514267568833!3d10.96618795566354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174dbbbfb9db9dd%3A0x1e916488badaaa2d!2zSOG6p20gcsaw4bujdSBwaOG7kSDhu5FjIGNow7ogbsSDbSA2!5e0!3m2!1sen!2s!4v1736997254872!5m2!1sen!2s",
+    "phone": [
+      "0362596790",
+      "0362596790"
+    ],
+    "email": "",
+    "fanpage": "Hầm rượu Phố Ốc Chú Năm 6",
+    "link": "https://www.facebook.com/phoocchunam",
+    "id": "6",
+    "slug": "ham-ruou-pho-oc-chu-nam-6"
   }
 ]

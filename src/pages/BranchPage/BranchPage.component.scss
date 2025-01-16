@@ -29,12 +29,8 @@
   .branch-info {
     .card-branch-image {
       width: 100%;
-      height: 300px;
+      aspect-ratio: 1.5;
       object-fit: cover;
-
-      @include breakpoint('max', '768px') {
-        height: 250px;
-      }
     }
 
     .card-branch-title {
