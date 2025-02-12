@@ -11,11 +11,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrModule } from 'ngx-toastr';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { NgScrollbarModule, NG_SCROLLBAR_OPTIONS } from 'ngx-scrollbar';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { FormsModule } from '@angular/forms';
-
 
 // Import Components
 import { MaterialModule } from './material.module';
@@ -60,14 +58,13 @@ export function createTranslateLoader(http: HttpClient) {
     ButtonToggleComponent,
     BlockFeatureComponent,
     BlockContactComponent,
-    FbPostsComponent
+    FbPostsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    NgScrollbarModule,
     CarouselModule,
     FormsModule,
     NgxSkeletonLoaderModule,
@@ -76,9 +73,9 @@ export function createTranslateLoader(http: HttpClient) {
       defaultLanguage: 'vi',
       loader: {
         provide: TranslateLoader,
-        useFactory: (createTranslateLoader),
-        deps: [HttpClient]
-      }
+        useFactory: createTranslateLoader,
+        deps: [HttpClient],
+      },
     }),
     MaterialModule,
     LazyloadModule,
@@ -87,20 +84,9 @@ export function createTranslateLoader(http: HttpClient) {
       autoDismiss: true,
       maxOpened: 10,
       timeOut: 2000,
-    })
+    }),
   ],
-  providers: [
-    {
-      provide: NG_SCROLLBAR_OPTIONS,
-      useValue: {
-        visibility: 'hover',
-        minThumbSize: 20,
-        autoWidthDisabled: false,
-        pointerEventsMethod: 'scrollbar'
-      }
-    }
-  ],
-  bootstrap: [AppComponent]
+  providers: [],
+  bootstrap: [AppComponent],
 })
-
-export class AppModule { }
+export class AppModule {}
